@@ -46,7 +46,7 @@ export default function HomeDream() {
         <h2 className="persian">به رویای دیجیتالت رنگ واقعیت ببخش</h2>
         <div className="picture animation pop">
           <Image
-            src="/../public/assets/images/homeDream.png"
+            src={require("../public/assets/images/homeDream.png")}
             alt="DREAM"
             layout="fill"
             loading="lazy"

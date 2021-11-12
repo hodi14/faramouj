@@ -6,7 +6,7 @@ export default function ContentInvest() {
       <div className="centeredContent">
         <div className="picture animation left">
           <Image
-            src="/../public/assets/images/content/planet.png"
+            src={require("../public/assets/images/content/planet.png")}
             layout="fill"
             alt="planet"
             loading="lazy"

@@ -7,7 +7,7 @@ export default function BlogCard(props) {
     const comments = props.comments;
     const likes = props.likes;
     const summary = props.summary;
-    const imgPath = "/../public/assets/images/blogs/" + props.imgPath;
+    const imgPath = "../public/assets/images/blogs/" + props.imgPath;
     return (
         <div className="blogCard">
             <div className="text">
@@ -43,7 +43,7 @@ export default function BlogCard(props) {
                 </div>
                 </div>
             <div className="picture">
-                <Image src={imgPath} alt={title} layout="fill" loading="lazy"/>
+                <Image src={require(imgPath)} alt={title} layout="fill" loading="lazy"/>
             </div>
         </div>
     )
