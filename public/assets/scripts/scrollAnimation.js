@@ -25,7 +25,7 @@ window.onscroll = () => {
       if (active > i - 0.5 && active < i + 0.5) {
         document
           .querySelector(".scrollSection ul")
-          .children[i-1].classList.add("active");
+          .children[i - 1].classList.add("active");
       }
     }
   }
@@ -33,9 +33,10 @@ window.onscroll = () => {
 
 // Home Dream
 const dreamImage = document.querySelector(".homeDream img");
-dreamImage.onclick = () => {
-  dreamImage.classList.add("shocked");
-  setTimeout(() => {
-    dreamImage.classList.remove("shocked");
-  }, 1000)
-}
+if (dreamImage != undefined)
+  dreamImage.onclick = () => {
+    dreamImage.classList.add("shocked");
+    setTimeout(() => {
+      dreamImage.classList.remove("shocked");
+    }, 1000);
+  };

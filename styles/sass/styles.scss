@@ -11,6 +11,9 @@ body {
   font-family: $fontPersian;
   * {
     cursor: none !important;
+    @include md {
+      cursor: auto !important;
+    }
     color: $colorText;
     transition: 0.4s;
     &:hover,
@@ -40,6 +43,9 @@ body {
   left: 0;
   top: 0;
   background-color: transparent;
+  @include md {
+    display: none;
+  }
   .border {
     border: 2px solid $colorText;
     margin: auto;
@@ -1436,8 +1442,14 @@ footer {
 
 /*#region Seo Page */
 .seoPage {
+  .pageContents {
+    padding: 6rem 1em 0;
+    @include md {
+      padding: 5rem 1rem 0;
+    }
+  }
   .pageContents > div {
-    margin: 5.25rem auto 0;
+    margin: 5rem auto 0;
     position: relative;
     min-height: calc(100vh - 6rem);
     max-width: 60rem;
@@ -1680,6 +1692,9 @@ footer {
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
+      @include sm {
+        padding: 0;
+      }
     }
     .step {
       max-width: 45rem;
@@ -1689,6 +1704,7 @@ footer {
       justify-content: space-between;
       align-items: stretch;
       margin-top: 1rem;
+
       &.one {
         width: calc(100% - 10rem);
         @include sm {
@@ -1741,8 +1757,16 @@ footer {
       }
       .text {
         padding: 0.5rem;
+        h4 {
+          @include sm {
+            font-size: 1.1rem;
+          }
+        }
         p {
           opacity: 0.6;
+          @include sm {
+            font-size: 0.85rem;
+          }
         }
       }
     }
@@ -1768,6 +1792,12 @@ footer {
 
 /*#region Content Creation */
 .contentProductionPage {
+  .pageContents {
+    padding: 6rem 1em 0;
+    @include md {
+      padding: 5rem 1rem 0;
+    }
+  }
   .pageContents > div {
     margin: 5.25rem auto 0;
     position: relative;

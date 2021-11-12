@@ -33,6 +33,11 @@ body * {
   color: #fff;
   transition: 0.4s;
 }
+@media (max-width: 992px) {
+  body * {
+    cursor: auto !important;
+  }
+}
 body *:hover, body *:before, body *:after {
   transition: 0.4s;
 }
@@ -56,6 +61,11 @@ body h4.persian {
   left: 0;
   top: 0;
   background-color: transparent;
+}
+@media (max-width: 992px) {
+  .customCursor {
+    display: none;
+  }
 }
 .customCursor .border {
   border: 2px solid #fff;
@@ -1521,8 +1531,16 @@ footer .footerRight .footerSocial li i {
 }
 /*#endregion */
 /*#region Seo Page */
+.seoPage .pageContents {
+  padding: 6rem 1em 0;
+}
+@media (max-width: 992px) {
+  .seoPage .pageContents {
+    padding: 5rem 1rem 0;
+  }
+}
 .seoPage .pageContents > div {
-  margin: 5.25rem auto 0;
+  margin: 5rem auto 0;
   position: relative;
   min-height: calc(100vh - 6rem);
   max-width: 60rem;
@@ -1801,6 +1819,11 @@ footer .footerRight .footerSocial li i {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 769px) {
+  .seoPage .seoPuzzle .steps {
+    padding: 0;
+  }
+}
 .seoPage .seoPuzzle .step {
   max-width: 45rem;
   text-align: right;
@@ -1879,8 +1902,18 @@ footer .footerRight .footerSocial li i {
 .seoPage .seoPuzzle .step .text {
   padding: 0.5rem;
 }
+@media (max-width: 769px) {
+  .seoPage .seoPuzzle .step .text h4 {
+    font-size: 1.1rem;
+  }
+}
 .seoPage .seoPuzzle .step .text p {
   opacity: 0.6;
+}
+@media (max-width: 769px) {
+  .seoPage .seoPuzzle .step .text p {
+    font-size: 0.85rem;
+  }
 }
 .seoPage .seoPuzzle .picture * {
   position: relative !important;
@@ -1902,6 +1935,14 @@ footer .footerRight .footerSocial li i {
 
 /*#endregion */
 /*#region Content Creation */
+.contentProductionPage .pageContents {
+  padding: 6rem 1em 0;
+}
+@media (max-width: 992px) {
+  .contentProductionPage .pageContents {
+    padding: 5rem 1rem 0;
+  }
+}
 .contentProductionPage .pageContents > div {
   margin: 5.25rem auto 0;
   position: relative;
