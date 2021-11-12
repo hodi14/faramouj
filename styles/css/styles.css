@@ -1531,14 +1531,6 @@ footer .footerRight .footerSocial li i {
 }
 /*#endregion */
 /*#region Seo Page */
-.seoPage .pageContents {
-  padding: 6rem 1em 0;
-}
-@media (max-width: 992px) {
-  .seoPage .pageContents {
-    padding: 5rem 1rem 0;
-  }
-}
 .seoPage .pageContents > div {
   margin: 5rem auto 0;
   position: relative;
@@ -1935,14 +1927,6 @@ footer .footerRight .footerSocial li i {
 
 /*#endregion */
 /*#region Content Creation */
-.contentProductionPage .pageContents {
-  padding: 6rem 1em 0;
-}
-@media (max-width: 992px) {
-  .contentProductionPage .pageContents {
-    padding: 5rem 1rem 0;
-  }
-}
 .contentProductionPage .pageContents > div {
   margin: 5.25rem auto 0;
   position: relative;

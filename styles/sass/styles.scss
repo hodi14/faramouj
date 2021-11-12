@@ -1442,12 +1442,6 @@ footer {
 
 /*#region Seo Page */
 .seoPage {
-  .pageContents {
-    padding: 6rem 1em 0;
-    @include md {
-      padding: 5rem 1rem 0;
-    }
-  }
   .pageContents > div {
     margin: 5rem auto 0;
     position: relative;
@@ -1792,12 +1786,6 @@ footer {
 
 /*#region Content Creation */
 .contentProductionPage {
-  .pageContents {
-    padding: 6rem 1em 0;
-    @include md {
-      padding: 5rem 1rem 0;
-    }
-  }
   .pageContents > div {
     margin: 5.25rem auto 0;
     position: relative;
