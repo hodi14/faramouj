@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function AcademyCard(props) {
   const color = props.color;
   const title = props.title;

@@ -2,7 +2,7 @@ import { NextSeo } from "next-seo";
 import Image from "next/image";
 import ContactLocation from "../../Components/ContactLocation";
 
-export default function ContactPage() {
+export default function Contact() {
 
   return (
     <section className="innerPage contactPage">

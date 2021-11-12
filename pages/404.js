@@ -1,7 +1,7 @@
 export default function Page404() {
   return (
     <div className="page404">
-      <img />
+      <h1> 4 0 4</h1>
     </div>
   );
 }

@@ -5,7 +5,7 @@ import WebQuestion from "./WebQuestion";
 import WebTeacher from "./WebTeacher";
 import WebVisual from "./WebVisual";
 
-export default function () {
+export default function WebSteps() {
   return (
     <div className="webSteps">
       <div className="title">

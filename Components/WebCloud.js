@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function (props) {
+export default function WebCloud(props) {
   const direction = props.animation;
   return (
     <div className={`webCloud animation ${direction}`}>

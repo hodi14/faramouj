@@ -6,11 +6,15 @@ import Box from "./Box";
 export default function Face(props) {
   const mesh = useRef();
   const position = props.position;
-  const cursor = {
+  let     cursor = {
     x: 0,
     y: 0,
   };
   useEffect(() => {
+    cursor = {
+      x: 0,
+      y: 0,
+    }
     window.addEventListener("mousemove", (event) => {
       cursor.x = event.clientX / window.innerWidth - 0.5;
       cursor.y = -(event.clientY / window.innerHeight - 0.5);

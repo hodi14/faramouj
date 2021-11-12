@@ -5,7 +5,7 @@ import logo from '../public/assets/images/logoWhite.png';
 export default function HeaderLogo() {
   return (
     <div className="headerLogo">
-      <Link href="/">
+      <Link href="/" passHref>
         <Image src={logo} layout='fill' alt='FARAMOUJ' loading="lazy" />
       </Link>
     </div>

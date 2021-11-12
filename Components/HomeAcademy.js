@@ -9,6 +9,7 @@ export default function HomeAcademy() {
         {courses.map((course, i) => {
           return (
             <AcademyCard
+              key = {i}
               color={course.color}
               title={course.title}
               publisher={course.publisher}
