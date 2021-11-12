@@ -1,0 +1,75 @@
+$colorBlue: #0071E3;
+$colorOrange: #F85D00 ;
+$colorYellow: #FFB629;
+$colorRed: #FA3454;
+$colorGray: #444444;
+$colorLightGray: #F1EEEB;
+$gradientPurple: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(91.06deg, #DA00D3 -21.12%, #D101D2 -8.73%, #B903CF 11.48%, #9106CB 36.98%, #5B0BC5 66.53%, #4D0CC3 73.28%);
+$colorText: #fff;
+$colorBackground: #181D21;
+$colorHeader: #181d21d6;
+
+$fontEnglish: Barrio;
+$fontTitle: Anjoman;
+$fontPersian: IRANYekan;
+
+@font-face {
+    font-family: Barrio;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../../public/assets/fonts/Barrio/Barrio-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: IRANYekan;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../../public/assets/fonts/IRANYekan/WebFonts/fonts/eot/IRANYekanWebRegular.eot');
+    src: url('../../public/assets/fonts/IRANYekan/WebFonts/fonts/eot/IRANYekanWebRegular.eot?#iefix') format('embedded-opentype'),
+    /* FF39+,Chrome36+, Opera24+*/
+    url('../../public/assets/fonts/IRANYekan/WebFonts/fonts/woff/IRANYekanWebRegular.woff') format('woff'),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../../public/assets/fonts/IRANYekan/WebFonts/fonts/ttf/IRANYekanWebRegular.ttf') format('truetype');
+}
+@font-face {
+    font-family: Anjoman;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../../public/assets/fonts/Anjoman/WebFonts/eot/Anjoman-UltraBold.eot');
+    src: url('../../public/assets/fonts/Anjoman/WebFonts/eot/Anjoman-UltraBold.eot?#iefix') format('embedded-opentype'),
+    /* FF39+,Chrome36+, Opera24+*/
+    url('../../public/assets/fonts/Anjoman/WebFonts/woff/Anjoman-UltraBold.woff') format('woff'),
+}
+@mixin xl {
+    @media (min-width: 1180px) {
+        @content;
+    }
+}
+@mixin lg {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (max-width: 769px) {
+        @content;
+    }
+}
+
+@mixin xs {
+    @media (max-width: 580px) {
+        @content;
+    }
+}
+
+@mixin xxs {
+    @media (max-width: 400px) {
+        @content;
+    }
+}

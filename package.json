@@ -9,12 +9,27 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/drei": "^7.17.2",
+    "@react-three/fiber": "^7.0.17",
+    "jquery": "^3.6.0",
+    "mdbreact": "^5.1.0",
     "next": "11.1.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "next-seo": "^4.28.1",
+    "particles-bg": "^2.5.5",
+    "react": "^17.0.2",
+    "react-animated-cursor": "^2.2.0",
+    "react-cursor-custom": "^1.2.4",
+    "react-dom": "17.0.2",
+    "react-efficient-cursor": "^1.0.0",
+    "react-owl-carousel": "^2.3.3",
+    "react-particles-js": "^3.5.3",
+    "react-three": "^0.9.7",
+    "three": "^0.133.1",
+    "tsparticles": "^1.36.0"
   },
   "devDependencies": {
     "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2"
+    "eslint-config-next": "11.1.2",
+    "webpack": "^5.60.0"
   }
 }
