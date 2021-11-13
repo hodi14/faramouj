@@ -744,11 +744,7 @@ img {
   position: relative;
   z-index: 2;
   margin-top: -4rem;
-}
-@media (max-width: 580px) {
-  .pageBanner {
-    height: calc(100vh - 4rem);
-  }
+  height: 100vh;
 }
 .pageBanner .text {
   z-index: 1;
@@ -1558,7 +1554,7 @@ footer .footerRight .footerSocial li i {
 /*#endregion */
 /*#region Seo Page */
 .seoPage .pageContents > div {
-  margin: 5rem auto 0;
+  margin: 5rem auto;
   position: relative;
   min-height: calc(100vh - 5rem);
   max-width: 60rem;
@@ -1572,7 +1568,7 @@ footer .footerRight .footerSocial li i {
 }
 @media (max-width: 992px) {
   .seoPage .pageContents > div {
-    margin: 4rem auto 0;
+    margin: 4rem auto;
     min-height: calc(100vh - 4rem);
   }
 }
@@ -1954,7 +1950,7 @@ footer .footerRight .footerSocial li i {
 /*#endregion */
 /*#region Content Creation */
 .contentProductionPage .pageContents > div {
-  margin: 5rem auto 0;
+  margin: 5rem auto;
   position: relative;
   min-height: calc(100vh - 5rem);
   max-width: 60rem;
@@ -1966,7 +1962,7 @@ footer .footerRight .footerSocial li i {
 }
 @media (max-width: 992px) {
   .contentProductionPage .pageContents > div {
-    margin: 4rem auto 0;
+    margin: 4rem auto;
     min-height: calc(100vh - 4rem);
   }
 }
@@ -2587,6 +2583,9 @@ body.lightTheme .customCursor .border {
 body.lightTheme .customCursor .circle {
   background-color: #181D21;
 }
+body.lightTheme .pageBanner * {
+  color: #fff;
+}
 body.lightTheme ::-webkit-scrollbar-track {
   background: #F1EEEB;
 }
@@ -2594,10 +2593,10 @@ body.lightTheme ::-webkit-scrollbar-thumb {
   background: #3c464f;
 }
 body.lightTheme .loader {
-  background-color: #181D21;
+  background-color: #fff;
 }
 body.lightTheme .loader:before {
-  background-color: #181D21;
+  background-color: #fff;
 }
 body.lightTheme .loader.loaded {
   animation-delay: 3s;
@@ -2621,7 +2620,7 @@ body.lightTheme .faq .faqItem .answer p {
 }
 @media (max-width: 769px) {
   body.lightTheme .scrollSection {
-    background-color: #181D21;
+    background-color: #fff;
   }
 }
 body.lightTheme .scrollSection ul li .circle {
@@ -2703,7 +2702,7 @@ body.lightTheme .homePage .homeAcademy .academyLogin a {
   background-color: #0071E3;
 }
 body.lightTheme .webDesignPage .webSteps p {
-  color: #F1EEEB;
+  color: #181D21;
 }
 body.lightTheme .contactPage .pageContents .text a:hover {
   color: #181D21;

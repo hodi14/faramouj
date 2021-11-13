@@ -686,9 +686,7 @@ img {
   position: relative;
   z-index: 2;
   margin-top: -4rem;
-  @include xs {
-    height: calc(100vh - 4rem);
-  }
+  height: 100vh;
   .text {
     z-index: 1;
     text-align: center;
@@ -1464,7 +1462,7 @@ footer {
 /*#region Seo Page */
 .seoPage {
   .pageContents > div {
-    margin: 5rem auto 0;
+    margin: 5rem auto;
     position: relative;
     min-height: calc(100vh - 5rem);
     max-width: 60rem;
@@ -1474,7 +1472,7 @@ footer {
       width: 100%;
     }
     @include md {
-      margin: 4rem auto 0;
+      margin: 4rem auto;
       min-height: calc(100vh - 4rem);
     }
     @include sm {
@@ -1808,7 +1806,7 @@ footer {
 /*#region Content Creation */
 .contentProductionPage {
   .pageContents > div {
-    margin: 5rem auto 0;
+    margin: 5rem auto;
     position: relative;
     min-height: calc(100vh - 5rem);
     max-width: 60rem;
@@ -1816,7 +1814,7 @@ footer {
       width: calc(100% - 7rem);
     }
     @include md {
-      margin: 4rem auto 0;
+      margin: 4rem auto;
       min-height: calc(100vh - 4rem);
     }
     @include sm {
@@ -2394,6 +2392,10 @@ body.lightTheme {
     }
   }
 
+  .pageBanner * {
+    color: $colorText;
+  }
+
   ::-webkit-scrollbar-track {
     background: $colorLightGray;
   }
@@ -2405,9 +2407,9 @@ body.lightTheme {
 
   /*#region Loader */
   .loader {
-    background-color: $colorBackground;
+    background-color: $colorText;
     &:before {
-      background-color: $colorBackground;
+      background-color: $colorText;
     }
     &.loaded {
       animation-delay: 3s;
@@ -2457,7 +2459,7 @@ body.lightTheme {
   /*#region Scroll Animation */
   .scrollSection {
     @include sm {
-      background-color: $colorBackground;
+      background-color: $colorText;
     }
     ul {
       li {
@@ -2589,7 +2591,7 @@ body.lightTheme {
   .webDesignPage {
     .webSteps {
       p {
-        color: $colorLightGray;
+        color: $colorBackground;
       }
     }
   }
