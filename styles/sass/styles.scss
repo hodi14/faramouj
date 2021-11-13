@@ -93,6 +93,9 @@ ul {
 
 a {
   text-decoration: none;
+  @include md {
+    cursor: pointer !important;
+  }
 }
 
 .row {
@@ -127,7 +130,7 @@ a {
   }
 
   .pageContents {
-    padding: 1rem;
+    padding: 0 1rem;
     max-width: 90rem;
     margin: auto;
     overflow: hidden;
@@ -166,6 +169,9 @@ textarea {
 button {
   outline: none !important;
   border: none;
+  @include md {
+    cursor: pointer !important;
+  }
 }
 
 img {
@@ -477,7 +483,8 @@ img {
     max-width: 35rem;
     margin: auto;
     @include sm {
-      max-width: 20rem;
+      width: 100%;
+      max-width: 25rem;
     }
     @include xs {
       order: -1;
@@ -846,6 +853,7 @@ header {
       }
 
       @include md {
+        max-width: unset;
         height: 100%;
         z-index: 100;
         position: fixed;
@@ -880,27 +888,19 @@ header {
       padding: 1rem;
       button {
         background-color: transparent;
-        * {
-          position: relative !important;
-        }
-        img {
-          width: 1.5rem !important;
-          height: 1.5rem !important;
-          object-fit: contain;
+        display: flex;
+        i {
+          font-size: 1.6rem;
         }
       }
     }
     .headerLeft {
       padding: 1rem;
       a {
-        * {
-          position: relative !important;
+        display: flex;
+        i {
+          font-size: 1.6rem;
         }
-      }
-      img {
-        width: 1.5rem !important;
-        height: 1.5rem !important;
-        object-fit: contain;
       }
     }
   }
@@ -1388,6 +1388,7 @@ footer {
         }
         @include md {
           display: flex;
+          justify-content: space-between;
           > div {
             padding: 0.5rem;
           }
@@ -1445,7 +1446,7 @@ footer {
   .pageContents > div {
     margin: 5rem auto 0;
     position: relative;
-    min-height: calc(100vh - 6rem);
+    min-height: calc(100vh - 5rem);
     max-width: 60rem;
     width: calc(100% - 5rem);
     @include xl {
@@ -1453,8 +1454,8 @@ footer {
       width: 100%;
     }
     @include md {
-      margin: 4.25rem auto 0;
-      min-height: calc(100vh - 5rem);
+      margin: 4rem auto 0;
+      min-height: calc(100vh - 4rem);
     }
     @include sm {
       width: 100%;
@@ -1787,16 +1788,16 @@ footer {
 /*#region Content Creation */
 .contentProductionPage {
   .pageContents > div {
-    margin: 5.25rem auto 0;
+    margin: 5rem auto 0;
     position: relative;
-    min-height: calc(100vh - 6rem);
+    min-height: calc(100vh - 5rem);
     max-width: 60rem;
     @media (max-width: 1200px) {
       width: calc(100% - 7rem);
     }
     @include md {
-      margin: 4.25rem auto 0;
-      min-height: calc(100vh - 5rem);
+      margin: 4rem auto 0;
+      min-height: calc(100vh - 4rem);
     }
     @include sm {
       width: 100%;
@@ -2354,4 +2355,225 @@ footer {
   }
 }
 
+/*#endregion */
+
+/*#region light theme */
+body.lightTheme {
+  /*#region General */
+  background-color: $colorText;
+  * {
+    color: $colorBackground;
+  }
+
+  .customCursor {
+    .border {
+      border: 1.5px solid $colorBackground !important;
+    }
+    .circle {
+      background-color: $colorBackground;
+    }
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $colorLightGray;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3c464f;
+  }
+
+  /*#endregion */
+
+  /*#region Loader */
+  .loader {
+    background-color: $colorBackground;
+    &:before {
+      background-color: $colorBackground;
+    }
+    &.loaded {
+      animation-delay: 3s;
+      animation: fade linear forwards 1s;
+    }
+  }
+  /*#endregion */
+
+  /*#region Consultant */
+  .consultant {
+    .inputs {
+      input {
+        border-bottom: 2px solid $colorGray;
+      }
+      textarea {
+        background-color: transparent;
+      }
+    }
+    .terms {
+      input {
+        &:after {
+          background-color: $colorText;
+          border: 1px solid $colorBackground;
+        }
+      }
+    }
+  }
+  /*#endregion */
+
+  /*#region FAQ */
+  .faq {
+    ul {
+      li {
+        border-bottom: 1px solid $colorLightGray;
+      }
+    }
+    .faqItem {
+      .answer {
+        p {
+          color: $colorLightGray;
+        }
+      }
+    }
+  }
+  /*#endregion */
+
+  /*#region Scroll Animation */
+  .scrollSection {
+    @include sm {
+      background-color: $colorBackground;
+    }
+    ul {
+      li {
+        .circle {
+          background-color: $colorBackground
+        }
+        .number {
+          -webkit-text-stroke-color: $colorBackground;
+        }
+        .cBorder {
+          border: 2px solid $colorText
+        }
+        &.active {
+          .cBorder {
+            border: 2px solid $colorBackground
+          }
+        }
+      }
+    }
+  }
+  /*#endregion */
+
+  /*#region Header */
+  header {
+    &:before {
+      background-color: #fefefe87;
+    }
+    .container-fluid {
+      .headerLogo img {
+        filter: invert(0.85);
+      }
+      .headerMenu {
+        li {
+          &:after {
+            background-color: $colorBackground;
+          }
+          a {
+            color: $colorHeader;
+          }
+          &.active {
+            a {
+              color: $colorBackground;
+            }
+          }
+        }
+
+        @include md {
+          &:before {
+            background-color: #fefefe87;
+          }
+        }
+      }
+    }
+  }
+
+  /*#endregion */
+
+  /*#region Footer */
+  footer {
+    background-color: #1c2227;
+  }
+  /*#endregion */
+
+  /*#region Home Page */
+  .homePage {
+    .homeCategories {
+      .homeCategoryCard {
+        &:before {
+          background: rgba(140, 140, 140, 0.1);
+        }
+      }
+    }
+
+    .homeAcademy {
+      .academyCard {
+        .picture i {
+          color: $colorText;
+        }
+        &:before {
+          background: rgba(140, 140, 140, 0.1);
+        }
+        &:hover:before {
+          background: rgba(140, 140, 140, 0.3);
+        }
+
+        .buttons {
+          a {
+            background-color: $colorText;
+          }
+        }
+      }
+      .academyLogin {
+        &:before {
+          background: rgba(140, 140, 140, 0.1);
+        }
+        a {
+          color: $colorText;
+          background-color: $colorBlue;
+        }
+      }
+    }
+  }
+  /*#endregion */
+
+  /*#region Web Design */
+  .webDesignPage {
+    .webSteps {
+      p {
+        color: $colorLightGray;
+      }
+    }
+  }
+  /*#endregion */
+
+  /*#region Contact Page */
+  .contactPage {
+    .pageContents {
+      .text {
+        a {
+          &:hover {
+            color: $colorBackground;
+          }
+        }
+      }
+      .map {
+        .location {
+          .details {
+            background-color: #111417;
+            a {
+              color: $colorLightGray;
+            }
+          }
+        }
+      }
+    }
+  }
+  /*#endregion */
+}
 /*#endregion */

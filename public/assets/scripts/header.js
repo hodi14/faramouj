@@ -30,3 +30,8 @@ document.querySelector("header .headerLogo").onclick = () => {
     .querySelector("header .headerMenu ul")
     .children[0].classList.add("active");
 };
+
+const toggleTheme = document.querySelector("header .headerRight.theme i");
+toggleTheme.onclick = () => {
+  document.body.classList.toggle("lightTheme");
+}

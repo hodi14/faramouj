@@ -110,6 +110,11 @@ ul {
 a {
   text-decoration: none;
 }
+@media (max-width: 992px) {
+  a {
+    cursor: pointer !important;
+  }
+}
 
 .row {
   width: 100%;
@@ -141,7 +146,7 @@ a {
   z-index: 0;
 }
 .innerPage .pageContents {
-  padding: 1rem;
+  padding: 0 1rem;
   max-width: 90rem;
   margin: auto;
   overflow: hidden;
@@ -183,6 +188,11 @@ textarea:focus {
 button {
   outline: none !important;
   border: none;
+}
+@media (max-width: 992px) {
+  button {
+    cursor: pointer !important;
+  }
 }
 
 img {
@@ -523,7 +533,8 @@ img {
 }
 @media (max-width: 769px) {
   .blogCard .picture {
-    max-width: 20rem;
+    width: 100%;
+    max-width: 25rem;
   }
 }
 @media (max-width: 580px) {
@@ -920,6 +931,7 @@ header .container-fluid .headerMenu li.active:after {
 }
 @media (max-width: 992px) {
   header .container-fluid .headerMenu {
+    max-width: unset;
     height: 100%;
     z-index: 100;
     position: fixed;
@@ -955,25 +967,19 @@ header .container-fluid .headerRight {
 }
 header .container-fluid .headerRight button {
   background-color: transparent;
+  display: flex;
 }
-header .container-fluid .headerRight button * {
-  position: relative !important;
-}
-header .container-fluid .headerRight button img {
-  width: 1.5rem !important;
-  height: 1.5rem !important;
-  object-fit: contain;
+header .container-fluid .headerRight button i {
+  font-size: 1.6rem;
 }
 header .container-fluid .headerLeft {
   padding: 1rem;
 }
-header .container-fluid .headerLeft a * {
-  position: relative !important;
+header .container-fluid .headerLeft a {
+  display: flex;
 }
-header .container-fluid .headerLeft img {
-  width: 1.5rem !important;
-  height: 1.5rem !important;
-  object-fit: contain;
+header .container-fluid .headerLeft a i {
+  font-size: 1.6rem;
 }
 
 /*#endregion */
@@ -1482,6 +1488,7 @@ footer .footerRight .footerSocial li i {
 @media (max-width: 992px) {
   .homePage .homeAcademy .academyLogin .title {
     display: flex;
+    justify-content: space-between;
   }
   .homePage .homeAcademy .academyLogin .title > div {
     padding: 0.5rem;
@@ -1534,7 +1541,7 @@ footer .footerRight .footerSocial li i {
 .seoPage .pageContents > div {
   margin: 5rem auto 0;
   position: relative;
-  min-height: calc(100vh - 6rem);
+  min-height: calc(100vh - 5rem);
   max-width: 60rem;
   width: calc(100% - 5rem);
 }
@@ -1546,8 +1553,8 @@ footer .footerRight .footerSocial li i {
 }
 @media (max-width: 992px) {
   .seoPage .pageContents > div {
-    margin: 4.25rem auto 0;
-    min-height: calc(100vh - 5rem);
+    margin: 4rem auto 0;
+    min-height: calc(100vh - 4rem);
   }
 }
 @media (max-width: 769px) {
@@ -1928,9 +1935,9 @@ footer .footerRight .footerSocial li i {
 /*#endregion */
 /*#region Content Creation */
 .contentProductionPage .pageContents > div {
-  margin: 5.25rem auto 0;
+  margin: 5rem auto 0;
   position: relative;
-  min-height: calc(100vh - 6rem);
+  min-height: calc(100vh - 5rem);
   max-width: 60rem;
 }
 @media (max-width: 1200px) {
@@ -1940,8 +1947,8 @@ footer .footerRight .footerSocial li i {
 }
 @media (max-width: 992px) {
   .contentProductionPage .pageContents > div {
-    margin: 4.25rem auto 0;
-    min-height: calc(100vh - 5rem);
+    margin: 4rem auto 0;
+    min-height: calc(100vh - 4rem);
   }
 }
 @media (max-width: 769px) {
@@ -2527,6 +2534,147 @@ footer .footerRight .footerSocial li i {
     opacity: 1;
   }
 }
+/*#endregion */
+/*#region light theme */
+body.lightTheme {
+  /*#region General */
+  background-color: #fff;
+  /*#endregion */
+  /*#region Loader */
+  /*#endregion */
+  /*#region Consultant */
+  /*#endregion */
+  /*#region FAQ */
+  /*#endregion */
+  /*#region Scroll Animation */
+  /*#endregion */
+  /*#region Header */
+  /*#endregion */
+  /*#region Footer */
+  /*#endregion */
+  /*#region Home Page */
+  /*#endregion */
+  /*#region Web Design */
+  /*#endregion */
+  /*#region Contact Page */
+  /*#endregion */
+}
+body.lightTheme * {
+  color: #181D21;
+}
+body.lightTheme .customCursor .border {
+  border: 1.5px solid #181D21 !important;
+}
+body.lightTheme .customCursor .circle {
+  background-color: #181D21;
+}
+body.lightTheme ::-webkit-scrollbar-track {
+  background: #F1EEEB;
+}
+body.lightTheme ::-webkit-scrollbar-thumb {
+  background: #3c464f;
+}
+body.lightTheme .loader {
+  background-color: #181D21;
+}
+body.lightTheme .loader:before {
+  background-color: #181D21;
+}
+body.lightTheme .loader.loaded {
+  animation-delay: 3s;
+  animation: fade linear forwards 1s;
+}
+body.lightTheme .consultant .inputs input {
+  border-bottom: 2px solid #444444;
+}
+body.lightTheme .consultant .inputs textarea {
+  background-color: transparent;
+}
+body.lightTheme .consultant .terms input:after {
+  background-color: #fff;
+  border: 1px solid #181D21;
+}
+body.lightTheme .faq ul li {
+  border-bottom: 1px solid #F1EEEB;
+}
+body.lightTheme .faq .faqItem .answer p {
+  color: #F1EEEB;
+}
+@media (max-width: 769px) {
+  body.lightTheme .scrollSection {
+    background-color: #181D21;
+  }
+}
+body.lightTheme .scrollSection ul li .circle {
+  background-color: #181D21;
+}
+body.lightTheme .scrollSection ul li .number {
+  -webkit-text-stroke-color: #181D21;
+}
+body.lightTheme .scrollSection ul li .cBorder {
+  border: 2px solid #fff;
+}
+body.lightTheme .scrollSection ul li.active .cBorder {
+  border: 2px solid #181D21;
+}
+body.lightTheme header:before {
+  background-color: #fefefe87;
+}
+body.lightTheme header .container-fluid .headerLogo img {
+  filter: invert(0.85);
+}
+body.lightTheme header .container-fluid .headerMenu li:after {
+  background-color: #181D21;
+}
+body.lightTheme header .container-fluid .headerMenu li a {
+  color: #181d21d6;
+}
+body.lightTheme header .container-fluid .headerMenu li.active a {
+  color: #181D21;
+}
+@media (max-width: 992px) {
+  body.lightTheme header .container-fluid .headerMenu:before {
+    background-color: #fefefe87;
+  }
+}
+body.lightTheme footer {
+  background-color: #1c2227;
+}
+body.lightTheme .homePage .homeCategories .homeCategoryCard:before {
+  background: rgba(140, 140, 140, 0.1);
+}
+body.lightTheme .homePage .homeAcademy .academyCard .picture i {
+  color: #fff;
+}
+body.lightTheme .homePage .homeAcademy .academyCard:before {
+  background: rgba(140, 140, 140, 0.1);
+}
+body.lightTheme .homePage .homeAcademy .academyCard:hover:before {
+  background: rgba(140, 140, 140, 0.3);
+}
+body.lightTheme .homePage .homeAcademy .academyCard .buttons a {
+  background-color: #fff;
+}
+body.lightTheme .homePage .homeAcademy .academyLogin:before {
+  background: rgba(140, 140, 140, 0.1);
+}
+body.lightTheme .homePage .homeAcademy .academyLogin a {
+  color: #fff;
+  background-color: #0071E3;
+}
+body.lightTheme .webDesignPage .webSteps p {
+  color: #F1EEEB;
+}
+body.lightTheme .contactPage .pageContents .text a:hover {
+  color: #181D21;
+}
+body.lightTheme .contactPage .pageContents .map .location .details {
+  background-color: #111417;
+}
+body.lightTheme .contactPage .pageContents .map .location .details a {
+  color: #F1EEEB;
+}
+
 /*#endregion */
 
 /*# sourceMappingURL=styles.css.map */

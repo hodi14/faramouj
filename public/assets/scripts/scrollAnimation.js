@@ -29,9 +29,8 @@ window.onscroll = () => {
       }
     }
   }
-};
 
-// Home Dream
+  // Home Dream
 const dreamImage = document.querySelector(".homeDream img");
 if (dreamImage != undefined)
   dreamImage.onclick = () => {
@@ -40,3 +39,4 @@ if (dreamImage != undefined)
       dreamImage.classList.remove("shocked");
     }, 1000);
   };
+};
