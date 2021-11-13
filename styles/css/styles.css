@@ -1037,7 +1037,7 @@ footer .footerRight .footerSocial li i {
 .homePage .homeBanner .centeredContent h1 {
   padding: 1rem;
   font-size: 7rem;
-  width: 20rem;
+  width: 18rem;
 }
 .homePage .homeBanner .centeredContent h1 .responsive {
   display: none;
@@ -1066,7 +1066,7 @@ footer .footerRight .footerSocial li i {
   padding: 1rem;
 }
 .homePage .homeBanner .picture img.face {
-  max-width: 30rem !important;
+  max-width: unset !important;
 }
 @media (max-width: 769px) {
   .homePage .homeBanner .picture img.face {
@@ -1170,7 +1170,7 @@ footer .footerRight .footerSocial li i {
   background: #fff;
 }
 .homePage .homeCategories .homeCategoryCard:nth-child(2):hover h2 {
-  color: #181D21;
+  color: #0071E3;
 }
 @media (max-width: 769px) {
   .homePage .homeCategories .homeCategoryCard {

@@ -968,7 +968,7 @@ footer {
       h1 {
         padding: 1rem;
         font-size: 7rem;
-        width: 20rem;
+        width: 18rem;
         .responsive {
           display: none;
         }
@@ -993,7 +993,7 @@ footer {
       position: relative;
       padding: 1rem;
       img.face {
-        max-width: 30rem !important;
+        max-width: unset !important;
         @include sm {
           max-height: calc(100vh - 25rem) !important;
         }
@@ -1116,7 +1116,7 @@ footer {
           background: $colorText;
         }
         h2 {
-          color: $colorBackground;
+          color: $colorBlue;
         }
       }
       @include sm {
