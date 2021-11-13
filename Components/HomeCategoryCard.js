@@ -17,6 +17,7 @@ export default function HomecategoryCard(props) {
   return (
     <Link href={props.link}>
       <a className="homeCategoryCard">
+        <i className="far fa-arrow-right arrow" />
         <div className="content">
           <h2 className="english">{nameEnglish}</h2>
           <h2 className="persian">{namePersian}</h2>

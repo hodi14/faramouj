@@ -1040,6 +1040,21 @@ footer {
       justify-content: center;
       align-items: center;
 
+      .arrow {
+        z-index: 1;
+        position: absolute;
+        right: 0.5rem;
+        top: 0.5rem;
+        color: $colorText;
+        width: 2rem;
+        height: 2rem;
+        background-color: $colorBlue;
+        border-radius: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
       &:before {
         top: 0;
         right: 0;
@@ -1079,6 +1094,11 @@ footer {
         max-width: 0;
       }
       &:hover {
+        .arrow {
+          transform: rotate(-45deg);
+          background-color: $colorText;
+          color: $colorBlue;
+        }
         &:after {
           max-height: 100%;
           max-width: 100%;
@@ -2442,17 +2462,17 @@ body.lightTheme {
     ul {
       li {
         .circle {
-          background-color: $colorBackground
+          background-color: $colorBackground;
         }
         .number {
           -webkit-text-stroke-color: $colorBackground;
         }
         .cBorder {
-          border: 2px solid $colorText
+          border: 2px solid $colorText;
         }
         &.active {
           .cBorder {
-            border: 2px solid $colorBackground
+            border: 2px solid $colorBackground;
           }
         }
       }
@@ -2510,7 +2530,30 @@ body.lightTheme {
         }
       }
     }
-
+    .homeCategories {
+      margin: auto;
+      max-width: 90rem;
+      min-height: calc(100vh - 4rem);
+      position: relative;
+      direction: ltr;
+  
+      .centeredContent {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        @include sm {
+          display: flex;
+          flex-wrap: wrap;
+        }
+      }
+      .homeCategoryCard {
+        &:hover {
+          h2 {
+            color: $colorText;
+          }
+        }
+      }
+    }
     .homeAcademy {
       .academyCard {
         .picture i {

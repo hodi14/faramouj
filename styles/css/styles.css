@@ -1116,6 +1116,20 @@ footer .footerRight .footerSocial li i {
   justify-content: center;
   align-items: center;
 }
+.homePage .homeCategories .homeCategoryCard .arrow {
+  z-index: 1;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  color: #fff;
+  width: 2rem;
+  height: 2rem;
+  background-color: #0071E3;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .homePage .homeCategories .homeCategoryCard:before {
   top: 0;
   right: 0;
@@ -1140,6 +1154,11 @@ footer .footerRight .footerSocial li i {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(53.68deg, #da00d3 -27.02%, #d101d2 -11.28%, #b903cf 14.42%, #9106cb 46.84%, #5b0bc5 84.41%, #4d0cc3 92.99%);
   max-height: 0;
   max-width: 0;
+}
+.homePage .homeCategories .homeCategoryCard:hover .arrow {
+  transform: rotate(-45deg);
+  background-color: #fff;
+  color: #0071E3;
 }
 .homePage .homeCategories .homeCategoryCard:hover:after {
   max-height: 100%;
@@ -2642,6 +2661,27 @@ body.lightTheme footer {
 }
 body.lightTheme .homePage .homeCategories .homeCategoryCard:before {
   background: rgba(140, 140, 140, 0.1);
+}
+body.lightTheme .homePage .homeCategories {
+  margin: auto;
+  max-width: 90rem;
+  min-height: calc(100vh - 4rem);
+  position: relative;
+  direction: ltr;
+}
+body.lightTheme .homePage .homeCategories .centeredContent {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+}
+@media (max-width: 769px) {
+  body.lightTheme .homePage .homeCategories .centeredContent {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+body.lightTheme .homePage .homeCategories .homeCategoryCard:hover h2 {
+  color: #fff;
 }
 body.lightTheme .homePage .homeAcademy .academyCard .picture i {
   color: #fff;
