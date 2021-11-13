@@ -5,7 +5,9 @@ window.onscroll = () => {
   let wScroll = window.scrollY;
   let wHeight = window.innerHeight;
   const animation = document.querySelectorAll(".animation");
-
+  const sectionCount = parseInt(
+    document.documentElement.scrollHeight / window.innerHeight
+  );
   for (let a of animation) {
     let top = a.getBoundingClientRect().top;
     let height = a.offsetHeight;
@@ -21,7 +23,7 @@ window.onscroll = () => {
     let active = wScroll / wHeight;
     const sections = document.querySelectorAll(".scrollSection li");
     for (let section of sections) section.classList.remove("active");
-    for (let i = 1; i < 6; i++) {
+    for (let i = 1; i < sectionCount; i++) {
       if (active > i - 0.5 && active < i + 0.5) {
         document
           .querySelector(".scrollSection ul")

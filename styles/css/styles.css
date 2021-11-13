@@ -147,7 +147,7 @@ a {
 }
 .innerPage .pageContents {
   padding: 0 1rem;
-  max-width: 90rem;
+  max-width: 75rem;
   margin: auto;
   overflow: hidden;
 }
@@ -302,7 +302,6 @@ img {
 .consultant .centeredContent {
   display: flex;
   justify-content: space-evenly;
-  flex-wrap: wrap;
   align-items: center;
 }
 @media (max-width: 769px) {
@@ -404,7 +403,7 @@ img {
   text-align: center;
 }
 .consultant .form .buttons {
-  padding: 1rem;
+  padding: 0 1rem;
 }
 .consultant .form .buttons button {
   padding: 0.5rem 2rem;
@@ -822,7 +821,7 @@ header .container-fluid {
   padding: 0 1rem;
   height: 5rem;
   width: 100%;
-  max-width: 90rem;
+  max-width: 75rem;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -864,7 +863,7 @@ header .container-fluid .headerLogo * {
 }
 header .container-fluid .headerLogo img {
   cursor: pointer;
-  width: 4rem !important;
+  width: 3.5rem !important;
   height: 4rem !important;
   object-fit: contain;
 }
@@ -981,6 +980,7 @@ header .container-fluid .headerLeft a i {
 /*#endregion */
 /*#region Footer */
 footer {
+  min-height: 50vh;
   background-color: #1c2227;
   z-index: 1000;
   width: 100vw;
@@ -989,7 +989,7 @@ footer {
   justify-content: space-between;
 }
 footer .content {
-  max-width: 90rem;
+  max-width: 75rem;
   padding: 1rem;
   margin: 0 auto;
 }
@@ -1026,7 +1026,7 @@ footer .footerRight .footerSocial li i {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 90rem;
+  max-width: 75rem;
 }
 @media (max-width: 769px) {
   .homePage .homeBanner .centeredContent {
@@ -1084,7 +1084,7 @@ footer .footerRight .footerSocial li i {
 }
 .homePage .homeCategories {
   margin: auto;
-  max-width: 90rem;
+  max-width: 75rem;
   min-height: calc(100vh - 4rem);
   position: relative;
   direction: ltr;
@@ -1125,6 +1125,7 @@ footer .footerRight .footerSocial li i {
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: rotate(-45deg);
 }
 .homePage .homeCategories .homeCategoryCard:before {
   top: 0;
@@ -1147,18 +1148,29 @@ footer .footerRight .footerSocial li i {
   width: 100%;
   height: 100%;
   border-radius: 1rem;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(53.68deg, #da00d3 -27.02%, #d101d2 -11.28%, #b903cf 14.42%, #9106cb 46.84%, #5b0bc5 84.41%, #4d0cc3 92.99%);
+  background-color: #0071E3;
   max-height: 0;
   max-width: 0;
 }
+.homePage .homeCategories .homeCategoryCard:nth-child(2):after {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(53.68deg, #da00d3 -27.02%, #d101d2 -11.28%, #b903cf 14.42%, #9106cb 46.84%, #5b0bc5 84.41%, #4d0cc3 92.99%);
+  max-height: 100%;
+  max-width: 100%;
+}
 .homePage .homeCategories .homeCategoryCard:hover .arrow {
-  transform: rotate(-45deg);
+  transform: rotate(0deg);
   background-color: #fff;
   color: #0071E3;
 }
 .homePage .homeCategories .homeCategoryCard:hover:after {
   max-height: 100%;
   max-width: 100%;
+}
+.homePage .homeCategories .homeCategoryCard:nth-child(2):hover:after {
+  background: #fff;
+}
+.homePage .homeCategories .homeCategoryCard:nth-child(2):hover h2 {
+  color: #181D21;
 }
 @media (max-width: 769px) {
   .homePage .homeCategories .homeCategoryCard {
@@ -1304,7 +1316,7 @@ footer .footerRight .footerSocial li i {
   transform: scale(0.7) rotateX(30deg);
 }
 .homePage .homeAcademy {
-  max-width: 90rem;
+  max-width: 75rem;
   padding: 1rem;
   margin: 4rem auto;
   display: flex;
@@ -1562,7 +1574,7 @@ footer .footerRight .footerSocial li i {
 }
 @media (min-width: 1180px) {
   .seoPage .pageContents > div {
-    max-width: 90rem;
+    max-width: 75rem;
     width: 100%;
   }
 }
@@ -2663,7 +2675,7 @@ body.lightTheme .homePage .homeCategories .homeCategoryCard:before {
 }
 body.lightTheme .homePage .homeCategories {
   margin: auto;
-  max-width: 90rem;
+  max-width: 75rem;
   min-height: calc(100vh - 4rem);
   position: relative;
   direction: ltr;
