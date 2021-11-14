@@ -450,6 +450,12 @@ img {
         }
       }
     }
+    .category {
+      background-color: #444;
+      width: fit-content;
+      padding: 0.5rem;
+      border-radius: 1rem;
+    }
     .summary {
       overflow: hidden;
       text-overflow: ellipsis;
@@ -458,12 +464,19 @@ img {
       -webkit-box-orient: vertical;
       line-height: 2rem;
       text-align: justify;
+      @include xs {
+        font-size: 0.9rem;
+      }
     }
     .buttons {
       padding: 0.5rem;
       a {
         display: flex;
         align-items: center;
+        font-weight: bold;
+        @include xs {
+          font-size: 0.9rem;
+        }
         i {
           padding-right: 0.25rem;
         }
@@ -980,6 +993,12 @@ footer {
           width: 100%;
           font-size: 3.5rem;
           text-align: center;
+          &.english {
+            order: -1;
+          }
+          &.persian {
+            order: 2;
+          }
           .responsive {
             display: block;
           }
@@ -1083,19 +1102,19 @@ footer {
       &:nth-child(2) {
         &:after {
           background: linear-gradient(
-            0deg,
-            rgba(0, 0, 0, 0.3),
-            rgba(0, 0, 0, 0.3)
-          ),
-          linear-gradient(
-            53.68deg,
-            #da00d3 -27.02%,
-            #d101d2 -11.28%,
-            #b903cf 14.42%,
-            #9106cb 46.84%,
-            #5b0bc5 84.41%,
-            #4d0cc3 92.99%
-          );
+              0deg,
+              rgba(0, 0, 0, 0.3),
+              rgba(0, 0, 0, 0.3)
+            ),
+            linear-gradient(
+              53.68deg,
+              #da00d3 -27.02%,
+              #d101d2 -11.28%,
+              #b903cf 14.42%,
+              #9106cb 46.84%,
+              #5b0bc5 84.41%,
+              #4d0cc3 92.99%
+            );
           max-height: 100%;
           max-width: 100%;
         }
@@ -1129,6 +1148,9 @@ footer {
           max-width: 25rem !important;
           @include sm {
             max-width: 15rem !important;
+          }
+          @include xxs {
+            max-width: 12rem !important;
           }
         }
       }
@@ -1342,12 +1364,10 @@ footer {
           width: 100%;
           display: flex;
           justify-content: space-between;
+          flex-wrap: wrap;
         }
         .detail {
           padding: 0.5rem 0;
-          @include sm {
-            height: 100%;
-          }
           i {
             font-size: 1.4rem;
             margin-left: 0.5rem;
@@ -1823,6 +1843,8 @@ footer {
 /*#region Content Creation */
 .contentProductionPage {
   .pageContents > div {
+    max-height: 100vh;
+    overflow: hidden;
     margin: 5rem auto;
     position: relative;
     min-height: calc(100vh - 5rem);
@@ -2395,7 +2417,7 @@ footer {
 /*#region light theme */
 body.lightTheme {
   /*#region General */
-  background-color: $colorText;
+  background-color: #ddd;
   * {
     color: $colorBackground;
   }
@@ -2410,7 +2432,7 @@ body.lightTheme {
   }
 
   .pageBanner * {
-    color: $colorText;
+    color: #ddd;
   }
 
   ::-webkit-scrollbar-track {
@@ -2424,9 +2446,9 @@ body.lightTheme {
 
   /*#region Loader */
   .loader {
-    background-color: $colorText;
+    background-color: #ddd;
     &:before {
-      background-color: $colorText;
+      background-color: #ddd;
     }
     &.loaded {
       animation-delay: 3s;
@@ -2448,10 +2470,13 @@ body.lightTheme {
     .terms {
       input {
         &:after {
-          background-color: $colorText;
+          background-color: #ddd;
           border: 1px solid $colorBackground;
         }
       }
+    }
+    .buttons button {
+      color: $colorText;
     }
   }
   /*#endregion */
@@ -2476,7 +2501,7 @@ body.lightTheme {
   /*#region Scroll Animation */
   .scrollSection {
     @include sm {
-      background-color: $colorText;
+      background-color: #ddd;
     }
     ul {
       li {
@@ -2487,7 +2512,7 @@ body.lightTheme {
           -webkit-text-stroke-color: $colorBackground;
         }
         .cBorder {
-          border: 2px solid $colorText;
+          border: 2px solid #ddd;
         }
         &.active {
           .cBorder {
@@ -2502,7 +2527,7 @@ body.lightTheme {
   /*#region Header */
   header {
     &:before {
-      background-color: #fefefe87;
+      background-color: #ddddddb8;
     }
     .container-fluid {
       .headerLogo img {
@@ -2525,7 +2550,7 @@ body.lightTheme {
 
         @include md {
           &:before {
-            background-color: #fefefe87;
+            background-color: #ddddddb8;
           }
         }
       }
@@ -2534,9 +2559,22 @@ body.lightTheme {
 
   /*#endregion */
 
+  /*#region Blog Card */
+  .blogCard {
+    .category {
+      background-color: #ccc;
+    }
+    .buttons {
+      a:hover {
+        color: $colorBackground;
+      }
+    }
+  }
+  /*#endregion */
+
   /*#region Footer */
   footer {
-    background-color: #1c2227;
+    background-color: #ccc;
   }
   /*#endregion */
 
@@ -2547,24 +2585,57 @@ body.lightTheme {
         &:before {
           background: rgba(140, 140, 140, 0.1);
         }
+        h2 {
+          color: $colorBlue;
+        }
+        &:nth-child(2) {
+          h2 {
+            color: $colorText;
+          }
+          &:after {
+            background: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.3),
+                rgba(0, 0, 0, 0.3)
+              ),
+              linear-gradient(
+                linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                linear-gradient(
+                  53.68deg,
+                  #da00d3 -27.02%,
+                  #d101d2 -11.28%,
+                  #b903cf 14.42%,
+                  #cb52fe 46.84%,
+                  #903bff 84.41%,
+                  #9357ff 92.99%
+                )
+              );
+            max-height: 100%;
+            max-width: 100%;
+          }
+        }
+        &:hover {
+          .arrow {
+            transform: rotate(0deg);
+            background-color: $colorText;
+            color: $colorBlue;
+          }
+          &:after {
+            max-height: 100%;
+            max-width: 100%;
+          }
+        }
+        &:nth-child(2):hover {
+          &:after {
+            background: $colorText;
+          }
+          h2 {
+            color: $colorBlue;
+          }
+        }
       }
     }
     .homeCategories {
-      margin: auto;
-      max-width: 75rem;
-      min-height: calc(100vh - 4rem);
-      position: relative;
-      direction: ltr;
-  
-      .centeredContent {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 50% 50%;
-        @include sm {
-          display: flex;
-          flex-wrap: wrap;
-        }
-      }
       .homeCategoryCard {
         &:hover {
           h2 {

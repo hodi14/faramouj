@@ -40,7 +40,7 @@ window.addEventListener(
           });
         }
         for (let i = 1; i <= sectionCount+1; i++) {
-          if (s >= i - 0.5 && s < i + 0.5 && section != i) {
+          if (s >= i - 0.5 && s < i + 0.2 && section != i) {
             section = i;
             window.scrollTo({
               top: section * window.innerHeight,
@@ -59,7 +59,7 @@ window.addEventListener(
           top: tmp * window.innerHeight,
           behavior: "smooth",
         });
-      }, 45 );
+      }, 45);
     }
   },
   false

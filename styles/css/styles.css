@@ -499,6 +499,12 @@ img {
 .blogCard .text .stats > div i {
   padding-right: 0.25rem;
 }
+.blogCard .text .category {
+  background-color: #444;
+  width: fit-content;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
 .blogCard .text .summary {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -508,12 +514,23 @@ img {
   line-height: 2rem;
   text-align: justify;
 }
+@media (max-width: 580px) {
+  .blogCard .text .summary {
+    font-size: 0.9rem;
+  }
+}
 .blogCard .text .buttons {
   padding: 0.5rem;
 }
 .blogCard .text .buttons a {
   display: flex;
   align-items: center;
+  font-weight: bold;
+}
+@media (max-width: 580px) {
+  .blogCard .text .buttons a {
+    font-size: 0.9rem;
+  }
 }
 .blogCard .text .buttons a i {
   padding-right: 0.25rem;
@@ -1054,6 +1071,12 @@ footer .footerRight .footerSocial li i {
     font-size: 3.5rem;
     text-align: center;
   }
+  .homePage .homeBanner .centeredContent h1.english {
+    order: -1;
+  }
+  .homePage .homeBanner .centeredContent h1.persian {
+    order: 2;
+  }
   .homePage .homeBanner .centeredContent h1 .responsive {
     display: block;
   }
@@ -1184,6 +1207,11 @@ footer .footerRight .footerSocial li i {
 @media (max-width: 769px) {
   .homePage .homeCategories .homeCategoryCard .picture img {
     max-width: 15rem !important;
+  }
+}
+@media (max-width: 400px) {
+  .homePage .homeCategories .homeCategoryCard .picture img {
+    max-width: 12rem !important;
   }
 }
 .homePage .homeCategories .homeCategoryCard .content {
@@ -1428,15 +1456,11 @@ footer .footerRight .footerSocial li i {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 .homePage .homeAcademy .academyCard .details .detail {
   padding: 0.5rem 0;
-}
-@media (max-width: 769px) {
-  .homePage .homeAcademy .academyCard .details .detail {
-    height: 100%;
-  }
 }
 .homePage .homeAcademy .academyCard .details .detail i {
   font-size: 1.4rem;
@@ -1962,6 +1986,8 @@ footer .footerRight .footerSocial li i {
 /*#endregion */
 /*#region Content Creation */
 .contentProductionPage .pageContents > div {
+  max-height: 100vh;
+  overflow: hidden;
   margin: 5rem auto;
   position: relative;
   min-height: calc(100vh - 5rem);
@@ -2565,7 +2591,7 @@ footer .footerRight .footerSocial li i {
 /*#region light theme */
 body.lightTheme {
   /*#region General */
-  background-color: #fff;
+  background-color: #ddd;
   /*#endregion */
   /*#region Loader */
   /*#endregion */
@@ -2576,6 +2602,8 @@ body.lightTheme {
   /*#region Scroll Animation */
   /*#endregion */
   /*#region Header */
+  /*#endregion */
+  /*#region Blog Card */
   /*#endregion */
   /*#region Footer */
   /*#endregion */
@@ -2596,7 +2624,7 @@ body.lightTheme .customCursor .circle {
   background-color: #181D21;
 }
 body.lightTheme .pageBanner * {
-  color: #fff;
+  color: #ddd;
 }
 body.lightTheme ::-webkit-scrollbar-track {
   background: #F1EEEB;
@@ -2605,10 +2633,10 @@ body.lightTheme ::-webkit-scrollbar-thumb {
   background: #3c464f;
 }
 body.lightTheme .loader {
-  background-color: #fff;
+  background-color: #ddd;
 }
 body.lightTheme .loader:before {
-  background-color: #fff;
+  background-color: #ddd;
 }
 body.lightTheme .loader.loaded {
   animation-delay: 3s;
@@ -2621,8 +2649,11 @@ body.lightTheme .consultant .inputs textarea {
   background-color: transparent;
 }
 body.lightTheme .consultant .terms input:after {
-  background-color: #fff;
+  background-color: #ddd;
   border: 1px solid #181D21;
+}
+body.lightTheme .consultant .buttons button {
+  color: #fff;
 }
 body.lightTheme .faq ul li {
   border-bottom: 1px solid #F1EEEB;
@@ -2632,7 +2663,7 @@ body.lightTheme .faq .faqItem .answer p {
 }
 @media (max-width: 769px) {
   body.lightTheme .scrollSection {
-    background-color: #fff;
+    background-color: #ddd;
   }
 }
 body.lightTheme .scrollSection ul li .circle {
@@ -2642,13 +2673,13 @@ body.lightTheme .scrollSection ul li .number {
   -webkit-text-stroke-color: #181D21;
 }
 body.lightTheme .scrollSection ul li .cBorder {
-  border: 2px solid #fff;
+  border: 2px solid #ddd;
 }
 body.lightTheme .scrollSection ul li.active .cBorder {
   border: 2px solid #181D21;
 }
 body.lightTheme header:before {
-  background-color: #fefefe87;
+  background-color: #ddddddb8;
 }
 body.lightTheme header .container-fluid .headerLogo img {
   filter: invert(0.85);
@@ -2664,32 +2695,46 @@ body.lightTheme header .container-fluid .headerMenu li.active a {
 }
 @media (max-width: 992px) {
   body.lightTheme header .container-fluid .headerMenu:before {
-    background-color: #fefefe87;
+    background-color: #ddddddb8;
   }
 }
+body.lightTheme .blogCard .category {
+  background-color: #ccc;
+}
+body.lightTheme .blogCard .buttons a:hover {
+  color: #181D21;
+}
 body.lightTheme footer {
-  background-color: #1c2227;
+  background-color: #ccc;
 }
 body.lightTheme .homePage .homeCategories .homeCategoryCard:before {
   background: rgba(140, 140, 140, 0.1);
 }
-body.lightTheme .homePage .homeCategories {
-  margin: auto;
-  max-width: 75rem;
-  min-height: calc(100vh - 4rem);
-  position: relative;
-  direction: ltr;
+body.lightTheme .homePage .homeCategories .homeCategoryCard h2 {
+  color: #0071E3;
 }
-body.lightTheme .homePage .homeCategories .centeredContent {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 50% 50%;
+body.lightTheme .homePage .homeCategories .homeCategoryCard:nth-child(2) h2 {
+  color: #fff;
 }
-@media (max-width: 769px) {
-  body.lightTheme .homePage .homeCategories .centeredContent {
-    display: flex;
-    flex-wrap: wrap;
-  }
+body.lightTheme .homePage .homeCategories .homeCategoryCard:nth-child(2):after {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(53.68deg, #da00d3 -27.02%, #d101d2 -11.28%, #b903cf 14.42%, #cb52fe 46.84%, #903bff 84.41%, #9357ff 92.99%));
+  max-height: 100%;
+  max-width: 100%;
+}
+body.lightTheme .homePage .homeCategories .homeCategoryCard:hover .arrow {
+  transform: rotate(0deg);
+  background-color: #fff;
+  color: #0071E3;
+}
+body.lightTheme .homePage .homeCategories .homeCategoryCard:hover:after {
+  max-height: 100%;
+  max-width: 100%;
+}
+body.lightTheme .homePage .homeCategories .homeCategoryCard:nth-child(2):hover:after {
+  background: #fff;
+}
+body.lightTheme .homePage .homeCategories .homeCategoryCard:nth-child(2):hover h2 {
+  color: #0071E3;
 }
 body.lightTheme .homePage .homeCategories .homeCategoryCard:hover h2 {
   color: #fff;
