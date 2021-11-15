@@ -3,6 +3,7 @@ import HomeAcademy from "../Components/HomeAcademy";
 import HomeBanner from "../Components/HomeBanner";
 import HomeBlog from "../Components/HomeBlog";
 import HomeCategories from "../Components/HomeCategories";
+import HomeComments from "../Components/HomeComments";
 import HomeDream from "../Components/HomeDream";
 
 
@@ -16,7 +17,7 @@ export default function Home() {
       <HomeAcademy />
       <Consultant category="" />
       <HomeBlog />
-
+      <HomeComments />
     </section>
   );
 }

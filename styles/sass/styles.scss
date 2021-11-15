@@ -95,6 +95,9 @@ a {
   text-decoration: none;
   @include md {
     cursor: pointer !important;
+    * {
+      cursor: pointer !important;
+    }
   }
 }
 
@@ -171,6 +174,9 @@ button {
   border: none;
   @include md {
     cursor: pointer !important;
+    * {
+      cursor: pointer !important;
+    }
   }
 }
 
@@ -1480,6 +1486,151 @@ footer {
   .homeBlog {
     margin: 5rem auto;
   }
+
+  .homeComments {
+    margin: 5rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 75rem;
+    padding: 1rem;
+    .title {
+      padding: 0 1rem;
+      max-width: 30rem;
+      text-align: right;
+      h2 {
+        font-size: 3rem;
+      }
+      @include md {
+        max-width: 20rem;
+        h2 {
+          font-size: 2rem;
+        }
+      }
+      @include sm {
+        text-align: center;
+        max-width: unset;
+        width: 100%;
+      }
+    }
+    .commentsCarousel {
+      padding: 0 1rem;
+      max-width: calc(100% - 30rem);
+      @include md {
+        max-width: calc(100% - 20rem);
+      }
+      @include sm {
+        max-width: unset;
+        width: 100%;
+      }
+      .owl-item {
+        padding: 0 1rem;
+      }
+      .owl-nav {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        button {
+          background-color: #444;
+          position: absolute;
+          font-size: 1.5rem;
+          width: 1.5rem;
+          height: 1.5rem;
+          border-radius: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &.owl-prev {
+            left: 0;
+          }
+          &.owl-next {
+            right: 0;
+          }
+        }
+      }
+      .owl-dots {
+        display: none;
+      }
+    }
+    .commentCard {
+      h4 {
+          text-align: right;
+      }
+      .bottom {
+        min-height: 6rem;
+        direction: ltr;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .voice {
+          padding: 0.5rem;
+          display: flex;
+          align-items: center;
+          width: 20rem;
+          @include xs {
+            width: 100%;
+          }
+          button {
+            border: 2px solid $colorText;
+            border-radius: 100%;
+            padding: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: transparent;
+            margin-right: 1rem;
+          }
+          .bars {
+            height: 100%;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            overflow: hidden;
+            align-items: center;
+          }
+          .bar {
+            width: 100%;
+            margin: 0.25rem;
+            border-radius: 0.5rem;
+            height: 100%;
+            background-color: $colorText;
+            min-height: 0.5rem;
+            max-height: 0.5rem;
+            transition: 0.8s;
+          }
+        }
+
+        .name {
+          padding: 0.5rem;
+          display: flex;
+          align-items: center;
+          .icon {
+            padding: 0.5rem;
+            border-radius: 100%;
+            background-color: #444;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i {
+              font-size: 1.8rem;
+            }
+          }
+
+          p {
+            padding-left: 1rem;
+            margin: auto;
+            &:nth-child(2) {
+              opacity: 0.6;
+              font-weight: lighter;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @keyframes homeAnimation {
@@ -2669,6 +2820,37 @@ body.lightTheme {
         a {
           color: $colorText;
           background-color: $colorBlue;
+        }
+      }
+    }
+    .homeComments {
+      .commentsCarousel {
+        .owl-nav {
+          button {
+            background-color: #ccc;
+          }
+        }
+      }
+      .commentCard {
+        h4 {
+            text-align: right;
+        }
+        .bottom {
+          .voice {
+            button {
+              border: 2px solid $colorBackground;
+            }
+            .bar {
+              background-color: $colorBackground;
+            }
+          }
+  
+          .name {
+            .icon {
+              background-color: #ccc;
+            }
+
+          }
         }
       }
     }

@@ -30,7 +30,7 @@ window.addEventListener(
   "scroll",
   (event) => {
     const scrollScetion = document.querySelector(".scrollSection");
-    let s = Math.round(window.scrollY / window.innerHeight);
+    let s = window.scrollY / window.innerHeight;
     if (scrollScetion != null) {
         if (s < 0.5 && section != 0) {
           section = 0;
@@ -40,7 +40,7 @@ window.addEventListener(
           });
         }
         for (let i = 1; i <= sectionCount+1; i++) {
-          if (s >= i - 0.5 && s < i + 0.2 && section != i) {
+          if (s >= i - 0.5 && s < i + 0.5 && section != i) {
             section = i;
             window.scrollTo({
               top: section * window.innerHeight,

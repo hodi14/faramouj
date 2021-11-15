@@ -25,7 +25,8 @@
     "react-particles-js": "^3.5.3",
     "react-three": "^0.9.7",
     "three": "^0.133.1",
-    "tsparticles": "^1.36.0"
+    "tsparticles": "^1.36.0",
+    "wavesurfer-react": "^2.0.11"
   },
   "devDependencies": {
     "eslint": "7.32.0",
