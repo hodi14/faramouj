@@ -1809,6 +1809,9 @@ footer .footerRight .footerSocial li i {
   background-repeat: no-repeat;
   background-size: contain;
 }
+.seoPage .seoLamp.on {
+  background-image: url("../../public/assets/images/seo/lampOn.png");
+}
 .seoPage .seoLamp.animation.backgroundR {
   background-position: 300%;
 }
@@ -1867,38 +1870,6 @@ footer .footerRight .footerSocial li i {
 }
 .seoPage .seoLamp .switch.off button {
   background-color: #181D21;
-}
-.seoPage .seoLamp .light {
-  position: absolute;
-  width: 20rem;
-  height: 20rem;
-  background: linear-gradient(235deg, transparent, 92%, #ffc107);
-  right: 13.5rem;
-  top: 3rem;
-  border-radius: 0 8rem 0;
-  transform: rotate(166deg);
-}
-@media (max-width: 769px) {
-  .seoPage .seoLamp .light {
-    right: 5rem;
-    top: 3rem;
-  }
-}
-@media (max-width: 400px) {
-  .seoPage .seoLamp .light {
-    display: none;
-  }
-}
-.seoPage .seoLamp .light:after {
-  content: "";
-  width: 30rem;
-  height: 20rem;
-  background-color: #181D21;
-  display: block;
-  transform: rotate(45deg) translate(58px, -217px);
-}
-.seoPage .seoLamp .light.off {
-  background: linear-gradient(235deg, transparent, 100%, #ffc107);
 }
 .seoPage .seoLamp .text {
   max-width: 40rem;

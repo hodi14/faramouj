@@ -1,14 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function SeoLamps() {
-  const [state, setState] = useState({ light: "", switch: "on" });
+  const [state, setState] = useState({switch: "on" });
   const changeState = () => {
-    if (state.light == "") setState({ light: "off", switch: "off" });
-    else setState({ light: "", switch: "on" });
+    if (state.switch == "on") setState({ switch: "off" });
+    else setState({ switch: "on" });
   };
+  useEffect(() => {
+    document.querySelector(".switch").onclick = () => {
+      document.querySelector(".seoLamp").style.transition = "0s";
+      document.querySelector(".seoLamp").classList.toggle("on");
+    }
+  }, [])
   return (
-    <div className="seoLamp animation backgroundR ">
-      <div className={`light ${state.light}`}></div>
+    <div className="seoLamp animation backgroundR">
       <div className={`switch ${state.switch}`} onClick={() => changeState()}>
         <button type="button"></button>
       </div>

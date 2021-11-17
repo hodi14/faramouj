@@ -1,10 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export default function HomecategoryCard(props) {
   const nameEnglish = props.nameEnglish;
   const namePersian = props.namePersian;
   let image;
+  useEffect(() => {
+    const categoryLinks = document.querySelectorAll(".homeCategoryCard");
+    const menuItems = document.querySelectorAll("header .headerMenu li a");
+
+    for (let categoryLink of categoryLinks) {
+      categoryLink.onclick = () => {
+        const linkClass = categoryLink.getAttribute("href").substring(1);
+        const path = ".headerMenu ul li." + linkClass;
+        console.log(path);
+        for (let other of menuItems) other.parentElement.classList.remove("active");
+        document.querySelector(`${path}`).classList.add("active");
+      }
+    }
+
+  }, []);
   if (props.picture)
     image = (
       <Image

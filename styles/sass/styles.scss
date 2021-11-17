@@ -1706,6 +1706,9 @@ footer {
     background-image: url("../../public/assets/images/seo/lamp.png");
     background-repeat: no-repeat;
     background-size: contain;
+    &.on {
+      background-image: url("../../public/assets/images/seo/lampOn.png");
+    }
     &.animation.backgroundR {
       background-position: 300%;
       &.show {
@@ -1755,34 +1758,7 @@ footer {
         }
       }
     }
-    .light {
-      position: absolute;
-      width: 20rem;
-      height: 20rem;
-      background: linear-gradient(235deg, transparent, 92%, #ffc107);
-      right: 13.5rem;
-      top: 3rem;
-      border-radius: 0 8rem 0;
-      @include sm {
-        right: 5rem;
-        top: 3rem;
-      }
-      @include xxs {
-        display: none;
-      }
-      transform: rotate(166deg);
-      &:after {
-        content: "";
-        width: 30rem;
-        height: 20rem;
-        background-color: $colorBackground;
-        display: block;
-        transform: rotate(45deg) translate(58px, -217px);
-      }
-      &.off {
-        background: linear-gradient(235deg, transparent, 100%, #ffc107);
-      }
-    }
+
     .text {
       max-width: 40rem;
       padding-right: 7rem;
