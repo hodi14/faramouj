@@ -4,7 +4,7 @@ export default function EmployeeCard(props) {
     const name = props.name;
     const position = props.position;
     const id = props.id;
-    const imgPath = "/../public/assets/images/Employees/" + id.toString() + ".jpeg";
+    const imgPath = "/../public/assets/images/Employees/" + id.toString() + ".jpg";
     return (
         <div className="employeeCard">
             <div className="picture">
