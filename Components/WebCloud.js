@@ -9,7 +9,7 @@ export default function WebCloud(props) {
           src={require("../public/assets/images/web/cloud.png")}
           layout="fill"
           alt="cloud"
-          loading="lazy"
+          
         />
       </div>
     </div>

@@ -18,7 +18,7 @@ export default function HomeComments() {
             position = {comment.customerPosition}
             text = {comment.text}
             voice = {comment.voice}
-
+            key={i}
           />;
         })}
       </OwlCarousel>

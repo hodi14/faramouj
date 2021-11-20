@@ -12,58 +12,79 @@ import { useRouter } from "next/router";
 import dynamic from "next/dynamic";
 
 export default function MyApp({ Component, pageProps }) {
-  const [routerChange, setRouterChange] = useState(false);
-  const loading = (refresh) => {
-    if (!refresh) {
-      const imgs = document.images;
-      let counter = 0;
+  // const [routerChange, setRouterChange] = useState(false);
+  // const loading = (refresh) => {
+  //   if (!refresh) {
+  //     const imgs = document.images;
+  //     let counter = 0;
 
-      [].forEach.call(imgs, (img) => {
-        if (img.complete) incrementCounter();
-        else img.addEventListener("load", incrementCounter, false);
-      });
+  //     [].forEach.call(imgs, (img) => {
+  //       if (img.complete) incrementCounter();
+  //       else img.addEventListener("load", incrementCounter, false);
+  //     });
 
-      function incrementCounter() {
-        counter++;
-        if (counter === imgs.length) {
-          console.log("all images are loaded");
-          document.querySelector(".loader").classList.add("loaded");
-        }
-      }
-    }
-    window.onload = () => {
-      const imgs = document.images;
-      let counter = 0;
+  //     function incrementCounter() {
+  //       counter++;
+  //       if (counter === imgs.length) {
+  //         console.log("all images are loaded");
+  //         document.querySelector(".loader").classList.add("loaded");
+  //       }
+  //     }
+  //   }
+  //   window.onload = () => {
+  //     const imgs = document.images;
+  //     let counter = 0;
 
-      [].forEach.call(imgs, (img) => {
-        if (img.complete) incrementCounter();
-        else img.addEventListener("load", incrementCounter, false);
-      });
+  //     [].forEach.call(imgs, (img) => {
+  //       if (img.complete) incrementCounter();
+  //       else img.addEventListener("load", incrementCounter, false);
+  //     });
 
-      function incrementCounter() {
-        counter++;
-        if (counter === imgs.length) {
-          console.log("all images are loaded");
-          document.querySelector(".loader").classList.add("loaded");
-        }
-      }
-    };
-  };
+  //     function incrementCounter() {
+  //       counter++;
+  //       if (counter === imgs.length) {
+  //         console.log("all images are loaded");
+  //         document.querySelector(".loader").classList.add("loaded");
+  //       }
+  //     }
+  //   };
+  // };
+  // useEffect(() => {
+  //   loading(true);
+  // }, []);
+
+  // const router = useRouter();
+  // const routeLoad = (e) => {
+  //   console.log("finished");
+  //   document.querySelector(".loader").classList.add("loaded");
+  // };
+  // useEffect(() => {
+  //   if (router && router.query) {
+  //     setRouterChange(true);
+  //   }
+  // }, [router]);
+  // if (routerChange) routeLoad(false);
+
   useEffect(() => {
-    loading(true);
-  }, []);
-
-  const router = useRouter();
-  const routeLoad = (e) => {
-    console.log("finished");
+    // const pictures = document.images;
+    // const picturesCount = pictures.length - 2;
+    // let loadingCount = 0;
+    // setInterval(() => {
+    //   for (let picture of pictures) {
+    //     picture.onload = () => {
+    //       loadingCount += 1;
+    //       console.log("loaded images are " + loadingCount);
+    //     }
+    //     if (picture.style.display == "none")
+    //       loadingCount += 1;
+    //      if (loadingCount == picturesCount) {
+    //        document.querySelector(".loader").classList.add("loaded");
+    //      }
+    //   }
+    // }, 10);
+    document.querySelector(".loader").classList.remove("loaded");
     document.querySelector(".loader").classList.add("loaded");
-  };
-  useEffect(() => {
-    if (router && router.query) {
-      setRouterChange(true);
-    }
-  }, [router]);
-  if (routerChange) routeLoad(false);
+  })
 
   return (
     <div>

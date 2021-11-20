@@ -2,19 +2,20 @@ import Image from "next/image";
 
 export default function EmployeeCard(props) {
     const name = props.name;
-    const role = props.role;
-    const imgPath = props.imgPath;
+    const position = props.position;
+    const id = props.id;
+    const imgPath = "/../public/assets/images/Employees/" + id.toString() + ".jpg";
     return (
         <div className="employeeCard">
             <div className="picture">
-                <Image src={imgPath} alt={name} layout="fill" loading="lazy"/>
+                <Image src={imgPath} alt={name} layout="fill" />
             </div>
             <div className="detail">
                 <h6>
                     {name}
                 </h6>
                 <p>
-                    {role}
+                    {position}
                 </p>
             </div>
         </div>

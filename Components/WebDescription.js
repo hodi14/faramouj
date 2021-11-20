@@ -8,7 +8,7 @@ export default function WebDescription() {
             src={require("../public/assets/images/web/box.png")}
             alt=" Web Design "
             layout="fill"
-            loading="lazy"
+            
           />
         </div>
         <div className="text">

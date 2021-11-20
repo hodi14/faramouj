@@ -49,7 +49,7 @@ export default function HomeDream() {
             src={require("../public/assets/images/homeDream.png")}
             alt="DREAM"
             layout="fill"
-            loading="lazy"
+            
           />
         </div>
         <h2 className="english">Sense your Digital dream</h2>

@@ -33,7 +33,7 @@ export default function SeoPuzzle() {
               src={require("../public/assets/images/seo/puzzle.png")}
               alt="puzzle"
               layout="fill"
-              loading="lazy"
+              
             />
           </div>
           <div className="step two">

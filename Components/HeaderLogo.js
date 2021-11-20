@@ -6,7 +6,7 @@ export default function HeaderLogo() {
   return (
     <div className="headerLogo">
       <Link href="/" passHref>
-        <Image src={logo} layout='fill' alt='FARAMOUJ' loading="lazy" />
+        <Image src={logo} layout='fill' alt='FARAMOUJ'  />
       </Link>
     </div>
   );

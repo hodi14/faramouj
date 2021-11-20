@@ -23,7 +23,7 @@ export default function Contact() {
             src={require("../../public/assets/images/map.png")}
             alt="Map"
             layout="fill"
-            loading="lazy"
+            
           />
         </div>
       </div>

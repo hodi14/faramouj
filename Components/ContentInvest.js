@@ -9,7 +9,7 @@ export default function ContentInvest() {
             src={require("../public/assets/images/content/planet.png")}
             layout="fill"
             alt="planet"
-            loading="lazy"
+            
           />
         </div>
         <div className="text">

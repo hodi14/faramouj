@@ -16,7 +16,7 @@ export default function WebSteps() {
               src="/../public/assets/images/web/plant.png"
               layout="fill"
               alt="plant"
-              loading="lazy"
+              
             />
           </div>
         </div>

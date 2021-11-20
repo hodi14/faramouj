@@ -10,7 +10,7 @@ export default function HomeBannerPicture() {
         src={require("../public/assets/images/homeBanner.png")}
         alt="Faramouj"
         layout="fill"
-        loading="lazy"
+        
       />
     </div>
   );

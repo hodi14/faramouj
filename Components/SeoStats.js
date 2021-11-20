@@ -20,7 +20,7 @@ export default function SeoStats() {
         <div className="items">
           <div className="item">
             <div className="picture animation pop">
-                <Image src={folder} alt="شروع وبگردی با جست و جو" layout="fill" loading="lazy"/>
+                <Image src={folder} alt="شروع وبگردی با جست و جو" layout="fill" />
             </div>
             <div className="text">
                 <h6>
@@ -35,7 +35,7 @@ export default function SeoStats() {
           </div>
           <div className="item">
             <div className="picture animation pop">
-                <Image src={shield} alt="فقط دیدن صفحه 1 نتایج" layout="fill" loading="lazy" />
+                <Image src={shield} alt="فقط دیدن صفحه 1 نتایج" layout="fill"  />
             </div>
             <div className="text">
                 <h6>
@@ -50,7 +50,7 @@ export default function SeoStats() {
           </div>
           <div className="item">
             <div className="picture animation pop">
-                <Image src={star} alt="کلیک برروی نتایج اول" layout="fill" loading="lazy" />
+                <Image src={star} alt="کلیک برروی نتایج اول" layout="fill"  />
             </div>
             <div className="text">
                 <h6>
@@ -65,7 +65,7 @@ export default function SeoStats() {
           </div>
           <div className="item">
             <div className="picture animation pop">
-                <Image src={user} alt="عدم اعتماد به تبلیغ گوگل" layout="fill" loading="lazy"/>
+                <Image src={user} alt="عدم اعتماد به تبلیغ گوگل" layout="fill" />
             </div>
             <div className="text">
                 <h6>
