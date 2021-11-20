@@ -1,7 +1,6 @@
 @import "./assets";
 
 /*#region Gneral */
-
 body {
   direction: rtl;
   background-color: $colorBackground;
@@ -31,13 +30,16 @@ body {
   h4.persian {
     font-family: $fontTitle;
   }
+  &.loading::-webkit-scrollbar {
+    width: 0 !important;
+  }
 }
 
 .customCursor {
   position: absolute;
   width: 3rem;
   height: 3rem;
-  z-index: 2001;
+  z-index: 1001;
   transition: none;
   pointer-events: none;
   left: 0;
@@ -973,18 +975,15 @@ footer {
     width: 50% !important;
     @include md {
       width: 100% !important;
-
     }
     .footerAbout {
       text-align: right;
-
     }
     .footerSocial {
       ul {
         display: flex;
       }
       li {
-
         padding: 0.5rem;
         a {
           margin: 0;
@@ -1613,7 +1612,7 @@ footer {
     }
     .commentCard {
       h4 {
-          text-align: right;
+        text-align: right;
       }
       .bottom {
         min-height: 6rem;
@@ -2622,7 +2621,8 @@ footer {
       }
       .detail {
         padding: 0.5rem;
-        h6, p {
+        h6,
+        p {
           margin: 0;
         }
         p {
@@ -2644,7 +2644,6 @@ footer {
     top: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-
   }
   h1 {
     color: $colorBlue;
@@ -2948,7 +2947,7 @@ body.lightTheme {
       }
       .commentCard {
         h4 {
-            text-align: right;
+          text-align: right;
         }
         .bottom {
           .voice {
@@ -2959,12 +2958,11 @@ body.lightTheme {
               background-color: $colorBackground;
             }
           }
-  
+
           .name {
             .icon {
               background-color: #ccc;
             }
-
           }
         }
       }

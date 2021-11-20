@@ -64,27 +64,41 @@ export default function MyApp({ Component, pageProps }) {
   //   }
   // }, [router]);
   // if (routerChange) routeLoad(false);
-
+  const router = useRouter();
+  let loadingCount = 0;
+  let time = 0;
   useEffect(() => {
-    // const pictures = document.images;
-    // const picturesCount = pictures.length - 2;
-    // let loadingCount = 0;
-    // setInterval(() => {
-    //   for (let picture of pictures) {
-    //     picture.onload = () => {
-    //       loadingCount += 1;
-    //       console.log("loaded images are " + loadingCount);
-    //     }
-    //     if (picture.style.display == "none")
-    //       loadingCount += 1;
-    //      if (loadingCount == picturesCount) {
-    //        document.querySelector(".loader").classList.add("loaded");
-    //      }
-    //   }
-    // }, 10);
-    document.querySelector(".loader").classList.remove("loaded");
-    document.querySelector(".loader").classList.add("loaded");
-  })
+    console.log("fine");
+    const pictures = document.images;
+    const picturesCount = pictures.length - 3;
+    console.log("pictures count: " + picturesCount);
+    document.body.classList.add("loading");
+    let t = 1;
+    const loaderInterval = setInterval(() => {
+      time += 0.01;
+        window.scrollTo({
+          top: t,
+        });
+        t += 10;
+      for (let picture of pictures) {
+        console.log("hello");
+        picture.onload = () => {
+          loadingCount += 1;
+          console.log("loaded images are " + loadingCount);
+        };
+        if (picture.style.display == "none") loadingCount += 1;
+        if (loadingCount >= picturesCount || time >= 10) {
+          document.querySelector(".loader").classList.add("loaded");
+          document.body.classList.remove("loading");
+          console.log("all is loaded");
+          window.scrollTo({
+            top: 0,
+          });
+          clearInterval(loaderInterval);
+        }
+      }
+    }, 10);
+  }, );
 
   return (
     <div>

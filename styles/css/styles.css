@@ -50,12 +50,15 @@ body h2.persian,
 body h4.persian {
   font-family: Anjoman;
 }
+body.loading::-webkit-scrollbar {
+  width: 0 !important;
+}
 
 .customCursor {
   position: absolute;
   width: 3rem;
   height: 3rem;
-  z-index: 2001;
+  z-index: 1001;
   transition: none;
   pointer-events: none;
   left: 0;
@@ -2802,7 +2805,8 @@ footer .footerContact a {
 .aboutPage .team .employeeCard .detail {
   padding: 0.5rem;
 }
-.aboutPage .team .employeeCard .detail h6, .aboutPage .team .employeeCard .detail p {
+.aboutPage .team .employeeCard .detail h6,
+.aboutPage .team .employeeCard .detail p {
   margin: 0;
 }
 .aboutPage .team .employeeCard .detail p {
