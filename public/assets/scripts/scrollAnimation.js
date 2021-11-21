@@ -5,8 +5,9 @@ window.onscroll = () => {
   let wScroll = window.scrollY;
   let wHeight = window.innerHeight;
   const animation = document.querySelectorAll(".animation");
+  let footerHieght = document.querySelector("footer").offsetHeight;
   const sectionCount = parseInt(
-    document.documentElement.scrollHeight / window.innerHeight
+    (document.documentElement.scrollHeight - footerHieght) / window.innerHeight
   );
   for (let a of animation) {
     let top = a.getBoundingClientRect().top;

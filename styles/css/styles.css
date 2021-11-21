@@ -1903,48 +1903,30 @@ footer .footerContact a {
 }
 .seoPage .seoLamp .switch {
   position: absolute;
-  border-radius: 1rem;
-  height: 3.2rem;
+  border-radius: 0.5rem;
+  height: 5.2rem;
   padding-top: 0.1rem;
   background-color: #b8b8b8;
   padding: 0.2rem;
   z-index: 1;
-  right: 6.5rem;
-  top: 15rem;
+  left: 6.5rem;
+  top: 6.5rem;
   cursor: pointer;
 }
-@media (max-width: 769px) {
-  .seoPage .seoLamp .switch {
-    right: 1.5rem;
-    top: 7.5rem;
-    height: 2.6rem;
-  }
-}
-@media (max-width: 400px) {
+@media (max-width: 650px) {
   .seoPage .seoLamp .switch {
     display: none;
   }
 }
 .seoPage .seoLamp .switch button {
   display: block;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 100%;
+  width: 5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
   background-color: #ffc107;
 }
-@media (max-width: 769px) {
-  .seoPage .seoLamp .switch button {
-    width: 1.2rem;
-    height: 1.2rem;
-  }
-}
 .seoPage .seoLamp .switch.off {
-  padding-top: 1.5rem;
-}
-@media (max-width: 769px) {
-  .seoPage .seoLamp .switch.off {
-    padding-top: 1.2rem;
-  }
+  padding-top: 2.5rem;
 }
 .seoPage .seoLamp .switch.off button {
   background-color: #181D21;

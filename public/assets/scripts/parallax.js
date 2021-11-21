@@ -31,7 +31,7 @@ window.addEventListener(
   (event) => {
     const scrollScetion = document.querySelector(".scrollSection");
     let s = window.scrollY / window.innerHeight;
-    if (scrollScetion != null) {
+    if (scrollScetion != null && s <= scrollScetion.querySelectorAll("li").length) {
         if (s < 0.5 && section != 0) {
           section = 0;
           window.scrollTo({

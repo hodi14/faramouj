@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function SeoLamps() {
-  const [state, setState] = useState({switch: "on" });
+  const [state, setState] = useState({switch: "off" });
   const changeState = () => {
     if (state.switch == "on") setState({ switch: "off" });
     else setState({ switch: "on" });
