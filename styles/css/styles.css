@@ -241,29 +241,38 @@ img {
   background-color: #181D21;
   z-index: 2000;
 }
-.loader:after {
-  content: "";
+.loader .bars {
   position: absolute;
-  top: 50%;
   left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
-  width: 10rem;
-  height: 10rem;
-  background: linear-gradient(#0071E3, #FA3454);
-  border-radius: 100%;
-  animation: rotate 1s linear infinite;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-height: 8rem;
 }
-.loader:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 9rem;
-  height: 9rem;
-  z-index: 1;
-  background-color: #181D21;
-  border-radius: 100%;
+.loader .bars .bar {
+  width: 1rem;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem;
+  height: 100%;
+  animation: wave infinite linear 1.5s;
+  min-height: 2rem;
+}
+.loader .bars .bar:nth-child(1) {
+  background: linear-gradient(to left, #FFB629, 50%, #F85D00);
+}
+.loader .bars .bar:nth-child(2) {
+  animation-delay: 0.4s;
+  background: linear-gradient(to left, #F85D00, 50%, #FA3454);
+}
+.loader .bars .bar:nth-child(3) {
+  animation-delay: 0.8s;
+  background: linear-gradient(to left, #FA3454, 50%, purple);
+}
+.loader .bars .bar:nth-child(4) {
+  animation-delay: 1.2s;
+  background: linear-gradient(to left, purple, 50%, #0071E3);
 }
 .loader.loaded {
   animation: fade linear forwards 1.5s;
@@ -280,15 +289,15 @@ img {
     z-index: -1;
   }
 }
-@keyframes rotate {
+@keyframes wave {
   0% {
-    transform: translate(-50%, -50%) rotate(0);
+    max-height: 2rem;
   }
   50% {
-    transform: translate(-50%, -50%) rotate(180deg);
+    max-height: 8rem;
   }
   100% {
-    transform: translate(-50%, -50%) rotate(360deg);
+    max-height: 2rem;
   }
 }
 /*#endregion */
