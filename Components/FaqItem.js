@@ -1,28 +1,43 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function FaqItem(props) {
   const question = props.question;
   const answer = props.answer;
-  const [item, setItem] = useState({ state: "", icon: "far fa-plus" });
+  useEffect(() => {
+    const arrows = document.querySelectorAll(".question i");
+    const answers = document.querySelectorAll(".answer");
+    for (let arrow of arrows) {
+      arrow.onclick = () => {
+        if (arrow.classList.contains("fa-plus")) {
+          const currAnswer = arrow.parentElement.nextElementSibling;
 
-  const toggleState = () => {
-    if (item.state == "")
-      setItem({ state: "opened", icon: "far fa-minus" });
-    else setItem({ state: "", icon: "far fa-plus" });
-  };
+          for (let other of arrows) {
+            other.classList.remove("fa-minus");
+            other.classList.add("fa-plus");
+          }
+          arrow.classList.remove("fa-plus");
+          arrow.classList.add("fa-minus");
+          for (let answer of answers) answer.classList.remove("opened");
+          currAnswer.classList.add("opened");
+        }
+        else {
+          for (let other of arrows) {
+            other.classList.remove("fa-minus");
+            other.classList.add("fa-plus");
+          }
+          for (let answer of answers) answer.classList.remove("opened");
+        }
+      };
+    }
+  }, []);
 
   return (
     <div className="faqItem">
       <div className="question">
         <h6>{question}</h6>
-        <i
-          className={item.icon}
-          onClick={() => {
-            toggleState();
-          }}
-        />
+        <i className="far fa-plus" />
       </div>
-      <div className={`answer ${item.state}`}>
+      <div className="answer">
         <p>{answer}</p>
       </div>
     </div>

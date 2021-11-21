@@ -516,9 +516,10 @@ img {
     margin: auto;
     @include sm {
       width: 100%;
-      max-width: 25rem;
+      max-width: 18rem;
     }
     @include xs {
+      max-width: 25rem;
       order: -1;
     }
     img {
@@ -531,6 +532,10 @@ img {
 
 /*#region FAQ */
 .faq {
+  .title {
+    padding: 1rem 0.5rem 2rem;
+    text-align: center;
+  }
   ul {
     max-width: 40rem;
     margin: auto;
@@ -566,7 +571,7 @@ img {
         margin: 0;
       }
       &.opened {
-        max-height: 12rem;
+        max-height: 25rem;
         padding: 0.25rem 0 1rem 1.5rem;
       }
     }
@@ -1582,7 +1587,7 @@ footer {
       }
     }
     .commentsCarousel {
-      padding: 0 1rem;
+      padding: 2rem 1rem;
       max-width: calc(100% - 30rem);
       @include md {
         max-width: calc(100% - 20rem);
