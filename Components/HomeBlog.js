@@ -4,15 +4,22 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import blogs from "../Data/blogs";
 import BlogCard from "./BlogCard";
 import { useEffect, useState } from "react";
+import axios from 'axios';
+
 
 export default function HomeBlog() {
   const OwlCarousel = dynamic(import("react-owl-carousel"), { ssr: false });
 
-  const [data , setData] = useState([])
-  useEffect(()=>{
-    fetch('https://blog.faramouj.com/wp-json/wp/v2/posts').then(res=> res.json()).then(info=> setData(info))
-    }, [])  
-  console.log("posts: " + data);
+  const [data, setData] = useState({ hits: [] });
+
+  useEffect(async () => {
+    const result = await axios(
+      'https://blog.faramouj.com/wp-json/wp/v2/posts',
+    );
+
+    setData(result.data);
+  }, []);
+  console.log("posts: " + JSON.stringify(data));
 
   return (
     <div className="homeBlog">

@@ -6,7 +6,7 @@ export default function SeoHand() {
     <div className="seoHand">
       <div className="centeredContent">
       <div className="picture animation pop">
-        <Image src={hand} alt="دیده شدن" layout="fill" />
+        <Image loading="eager" src={hand} alt="دیده شدن" layout="fill" />
       </div>
       <div className="text">
         <h2>

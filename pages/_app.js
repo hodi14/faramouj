@@ -17,17 +17,13 @@ export default function MyApp({ Component, pageProps }) {
   let time = 0;
   useEffect(() => {
     document.querySelector(".loader").classList.remove("loaded");
+    document.body.classList.add("loading");
     const pictures = document.images;
     const picturesCount = pictures.length - 3;
     console.log("Loding...");
-    document.body.classList.add("loading");
     let t = 1;
     const loaderInterval = setInterval(() => {
       time += 0.01;
-        window.scrollTo({
-          top: t,
-        });
-        t += 10;
       for (let picture of pictures) {
         picture.onload = () => {
           loadingCount += 1;
@@ -37,10 +33,6 @@ export default function MyApp({ Component, pageProps }) {
           document.querySelector(".loader").classList.add("loaded");
           document.body.classList.remove("loading");
           console.log("page is loaded");
-          window.scrollTo({
-            top: 0,
-          });
-          clearInterval(loaderInterval);
         }
       }
     }, 10);

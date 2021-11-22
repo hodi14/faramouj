@@ -12,7 +12,6 @@ export default function HomeComments() {
     setTimeout (() => {
       const owlNavs = document.querySelectorAll(".commentsCarousel .owl-nav button");
       for (let owlNav of owlNavs) {
-        console.log("bluh " + owlNav);
         owlNav.onclick = () => {
           console.log("clicked nav");
           const audios = document.querySelectorAll(".voice video");
