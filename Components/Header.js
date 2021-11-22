@@ -47,6 +47,7 @@ export default function Header() {
     };
 
     const toggleTheme = document.querySelector("header .headerRight.theme i");
+
     toggleTheme.onclick = () => {
       document.body.classList.toggle("lightTheme");
     };

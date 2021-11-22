@@ -1056,7 +1056,6 @@ footer > .content > div a {
   margin: 0.5rem;
 }
 footer > .content > div a:hover {
-  color: #fff;
   opacity: 1;
 }
 footer .footerLogo {
@@ -2927,9 +2926,6 @@ body.lightTheme .consultant .buttons button {
 body.lightTheme .faq ul li {
   border-bottom: 1px solid #F1EEEB;
 }
-body.lightTheme .faq .faqItem .answer p {
-  color: #F1EEEB;
-}
 @media (max-width: 769px) {
   body.lightTheme .scrollSection {
     background-color: #ddd;
@@ -3048,14 +3044,15 @@ body.lightTheme .homePage .homeComments .commentCard .bottom .name .icon {
 body.lightTheme .webDesignPage .webSteps p {
   color: #181D21;
 }
-body.lightTheme .contactPage .pageContents .text a:hover {
+body.lightTheme .contactPage .pageContents .text a {
   color: #181D21;
 }
 body.lightTheme .contactPage .pageContents .map .location .details {
-  background-color: #111417;
+  background-color: #ccc;
 }
 body.lightTheme .contactPage .pageContents .map .location .details a {
-  color: #F1EEEB;
+  color: #181D21;
+  opacity: 0.7;
 }
 
 /*#endregion */

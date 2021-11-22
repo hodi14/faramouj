@@ -49,7 +49,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <div>
       <Head>
-        <title> Faramouj </title>{" "}
+        <title> Faramouj </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Layout>

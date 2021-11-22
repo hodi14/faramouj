@@ -974,7 +974,6 @@ footer {
         opacity: 0.7;
         margin: 0.5rem;
         &:hover {
-          color: $colorText;
           opacity: 1;
         }
       }
@@ -2754,13 +2753,6 @@ body.lightTheme {
         border-bottom: 1px solid $colorLightGray;
       }
     }
-    .faqItem {
-      .answer {
-        p {
-          color: $colorLightGray;
-        }
-      }
-    }
   }
   /*#endregion */
 
@@ -2994,17 +2986,16 @@ body.lightTheme {
     .pageContents {
       .text {
         a {
-          &:hover {
-            color: $colorBackground;
-          }
+          color: $colorBackground;
         }
       }
       .map {
         .location {
           .details {
-            background-color: #111417;
+            background-color:#ccc;
             a {
-              color: $colorLightGray;
+              color: $colorBackground;
+              opacity: 0.7;
             }
           }
         }

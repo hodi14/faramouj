@@ -113,4 +113,10 @@ export default [
         team: "SEO Team",
         position: "Seo Specialist"
     },
+    {
+        id: 61,
+        name: "Mahdi Asadi",
+        team: "Other",
+        position: "Accountant"
+    },
 ]

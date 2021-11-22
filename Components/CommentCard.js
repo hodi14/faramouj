@@ -8,14 +8,14 @@ export default function CommentCard(props) {
   const audio = "../assets/audio/" + props.audio;
   const ref = useRef();
   const bars = [];
-  const [state, setState] = useState("");
+  const [state, setState] = useState("pause");
   const toggleState = () => {
-    if (state == "") {
+    if (state == "pause") {
       setState("play");
       ref.current.play();
     } 
     else {
-      setState("");
+      setState("pause");
       ref.current.pause();
     }
     console.log("ref: " + ref.current);
@@ -39,7 +39,7 @@ export default function CommentCard(props) {
         </div>
         <div className={`voice ${state}`}>
           <button type="button" onClick={() => toggleState()}>
-            <i className="fal fa-play" />
+            <i className={`fal fa-${state=="play" ? "pause" : "play"}`} />
           </button>
           <video style={{ display: "none" }} ref={ref}>
             <source src={audio} />
