@@ -1636,8 +1636,9 @@ footer {
         direction: ltr;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
         .voice {
+          height: 10rem;
           padding: 0.5rem;
           display: flex;
           align-items: center;
@@ -1648,12 +1649,15 @@ footer {
           button {
             border: 2px solid $colorText;
             border-radius: 100%;
-            padding: 0.5rem 0.5rem 0.5rem 0.6rem;
+            padding: 0.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
             background-color: transparent;
             margin-right: 1rem;
+            i {
+              font-size: 1.2rem;
+            }
           }
           .bars {
             height: 100%;

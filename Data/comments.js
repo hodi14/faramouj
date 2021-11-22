@@ -3,18 +3,18 @@ export default [
         text: "ما از همکاری با فراموج به شدت خوش حالیم",
         audio: "snapp.mp4",
         customerName: "Bahare Khoram",
-        customerPosition: "CMO, Snapp Market",
+        customerPosition: "Seo Manager, Snapp Market",
     },
     {
-        text: "perfect",
+        text: "ما از همکاری با فراموج به شدت خوش حالیم",
         audio: "snapp.mp4",
-        customerName: "cClass",
-        customerPosition: "cmo, mammut",
+        customerName: "Alireza Hodaei",
+        customerPosition: "Chied Front-end Developer, Faramouj",
     },
     {
-        text: "we are a family",
+        text: "ما از همکاری با فراموج به شدت خوش حالیم",
         audio: "snapp.mp4",
-        customerName: "maziar faghihi",
-        customerPosition: "cmo, mammut",
+        customerName: "Maziar Faghihi",
+        customerPosition: "CEO, faramouj",
     }
 ]

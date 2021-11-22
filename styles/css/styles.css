@@ -1744,9 +1744,10 @@ footer .footerContact a {
   direction: ltr;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .homePage .homeComments .commentCard .bottom .voice {
+  height: 10rem;
   padding: 0.5rem;
   display: flex;
   align-items: center;
@@ -1760,12 +1761,15 @@ footer .footerContact a {
 .homePage .homeComments .commentCard .bottom .voice button {
   border: 2px solid #fff;
   border-radius: 100%;
-  padding: 0.5rem 0.5rem 0.5rem 0.6rem;
+  padding: 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
   margin-right: 1rem;
+}
+.homePage .homeComments .commentCard .bottom .voice button i {
+  font-size: 1.2rem;
 }
 .homePage .homeComments .commentCard .bottom .voice .bars {
   height: 100%;
