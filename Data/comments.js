@@ -1,19 +1,19 @@
 export default [
     {
-        text: "we are very happy",
-        voice: "",
-        customerName: "niki karimi",
-        customerPosition: "cmo, mammut",
+        text: "ما از همکاری با فراموج به شدت خوش حالیم",
+        audio: "snapp.mp4",
+        customerName: "Bahare Khoram",
+        customerPosition: "CMO, Snapp Market",
     },
     {
         text: "perfect",
-        voice: "",
+        audio: "snapp.mp4",
         customerName: "cClass",
         customerPosition: "cmo, mammut",
     },
     {
         text: "we are a family",
-        voice: "",
+        audio: "snapp.mp4",
         customerName: "maziar faghihi",
         customerPosition: "cmo, mammut",
     }

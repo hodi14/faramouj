@@ -12,66 +12,13 @@ import { useRouter } from "next/router";
 import dynamic from "next/dynamic";
 
 export default function MyApp({ Component, pageProps }) {
-  // const [routerChange, setRouterChange] = useState(false);
-  // const loading = (refresh) => {
-  //   if (!refresh) {
-  //     const imgs = document.images;
-  //     let counter = 0;
-
-  //     [].forEach.call(imgs, (img) => {
-  //       if (img.complete) incrementCounter();
-  //       else img.addEventListener("load", incrementCounter, false);
-  //     });
-
-  //     function incrementCounter() {
-  //       counter++;
-  //       if (counter === imgs.length) {
-  //         console.log("all images are loaded");
-  //         document.querySelector(".loader").classList.add("loaded");
-  //       }
-  //     }
-  //   }
-  //   window.onload = () => {
-  //     const imgs = document.images;
-  //     let counter = 0;
-
-  //     [].forEach.call(imgs, (img) => {
-  //       if (img.complete) incrementCounter();
-  //       else img.addEventListener("load", incrementCounter, false);
-  //     });
-
-  //     function incrementCounter() {
-  //       counter++;
-  //       if (counter === imgs.length) {
-  //         console.log("all images are loaded");
-  //         document.querySelector(".loader").classList.add("loaded");
-  //       }
-  //     }
-  //   };
-  // };
-  // useEffect(() => {
-  //   loading(true);
-  // }, []);
-
-  // const router = useRouter();
-  // const routeLoad = (e) => {
-  //   console.log("finished");
-  //   document.querySelector(".loader").classList.add("loaded");
-  // };
-  // useEffect(() => {
-  //   if (router && router.query) {
-  //     setRouterChange(true);
-  //   }
-  // }, [router]);
-  // if (routerChange) routeLoad(false);
   const router = useRouter();
   let loadingCount = 0;
   let time = 0;
   useEffect(() => {
-    console.log("fine");
     const pictures = document.images;
     const picturesCount = pictures.length - 3;
-    console.log("pictures count: " + picturesCount);
+    console.log("Loding...");
     document.body.classList.add("loading");
     let t = 1;
     const loaderInterval = setInterval(() => {
@@ -81,16 +28,14 @@ export default function MyApp({ Component, pageProps }) {
         });
         t += 10;
       for (let picture of pictures) {
-        console.log("hello");
         picture.onload = () => {
           loadingCount += 1;
-          console.log("loaded images are " + loadingCount);
         };
         if (picture.style.display == "none") loadingCount += 1;
         if (loadingCount >= picturesCount || time >= 10) {
           document.querySelector(".loader").classList.add("loaded");
           document.body.classList.remove("loading");
-          console.log("all is loaded");
+          console.log("page is loaded");
           window.scrollTo({
             top: 0,
           });

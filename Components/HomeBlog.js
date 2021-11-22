@@ -10,9 +10,9 @@ export default function HomeBlog() {
 
   const [data , setData] = useState([])
   useEffect(()=>{
-    //fetch('https://blog.faramouj.com/wp-json/wp/v2/posts').then(res=> res.json()).then(info=> setData(info))
-    }, [])
-  console.log("posts: " + data[0]);
+    fetch('https://blog.faramouj.com/wp-json/wp/v2/posts').then(res=> res.json()).then(info=> setData(info))
+    }, [])  
+  console.log("posts: " + data);
 
   return (
     <div className="homeBlog">

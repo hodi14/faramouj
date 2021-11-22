@@ -1,16 +1,24 @@
 import Script from "next/script";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 export default function CommentCard(props) {
   const text = props.text;
   const name = props.name;
   const position = props.position;
-  const voice = props.voice;
+  const audio = "../assets/audio/" + props.audio;
+  const ref = useRef();
   const bars = [];
   const [state, setState] = useState("");
   const toggleState = () => {
-    if (state == "") setState("play");
-    else setState("");
+    if (state == "") {
+      setState("play");
+      ref.current.play();
+    } 
+    else {
+      setState("");
+      ref.current.pause();
+    }
+    console.log("ref: " + ref.current);
   };
   for (let i = 0; i < 20; i++) bars.push(0);
 
@@ -33,6 +41,9 @@ export default function CommentCard(props) {
           <button type="button" onClick={() => toggleState()}>
             <i className="fal fa-play" />
           </button>
+          <video style={{ display: "none" }} ref={ref}>
+            <source src={audio} />
+          </video>
           <div className="bars">
             {bars.map((bar, i) => {
               return <div className="bar" key={i}></div>;
