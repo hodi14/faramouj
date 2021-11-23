@@ -34,4 +34,5 @@
     "eslint-config-next": "11.1.2",
     "webpack": "^5.60.0"
   }
+
 }

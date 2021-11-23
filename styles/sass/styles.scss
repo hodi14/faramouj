@@ -239,16 +239,16 @@ img {
 
       }
       &:nth-child(2) {
-        animation-delay: 0.4s;
+        animation-delay: 0.2s;
         background: linear-gradient(to left, $colorOrange, 50%, $colorRed);
 
       }
       &:nth-child(3) {
-        animation-delay: 0.8s;
+        animation-delay: 0.4s;
         background: linear-gradient(to left, $colorRed, 50%, purple);
       }
       &:nth-child(4) {
-        animation-delay: 1.2s;
+        animation-delay: 0.6s;
         background: linear-gradient(to left, purple, 50%, $colorBlue);
 
       }

@@ -33,6 +33,7 @@ export default function MyApp({ Component, pageProps }) {
           document.querySelector(".loader").classList.add("loaded");
           document.body.classList.remove("loading");
           console.log("page is loaded");
+          clearInterval(loaderInterval);
         }
       }
     }, 10);

@@ -6,20 +6,22 @@ import BlogCard from "./BlogCard";
 import { useEffect, useState } from "react";
 import axios from 'axios';
 
-
-export default function HomeBlog() {
+const HomeBlog = ({ blogPosts }) => {
   const OwlCarousel = dynamic(import("react-owl-carousel"), { ssr: false });
 
-  const [data, setData] = useState({ hits: [] });
+  const [data, setData] = useState({});
 
-  useEffect(async () => {
-    const result = await axios(
-      'https://blog.faramouj.com/wp-json/wp/v2/posts',
-    );
+  const getBlogApi = async() => {
+    const res = await axios.get('https://blog.faramouj.com/wp-json/wp/v2/posts?per_page=3'); 
+    setData(JSON.stringify(res.data));
+  }
 
-    setData(result.data);
-  }, []);
-  console.log("posts: " + JSON.stringify(data));
+  useEffect(() => {
+    getBlogApi();
+  }
+  , []);
+  console.log("posts: " + data);
+
 
   return (
     <div className="homeBlog">
@@ -42,3 +44,5 @@ export default function HomeBlog() {
     </div>
   );
 }
+
+export default HomeBlog;
