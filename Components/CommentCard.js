@@ -18,7 +18,6 @@ export default function CommentCard(props) {
       setState("pause");
       ref.current.pause();
     }
-    console.log("ref: " + ref.current);
   };
   for (let i = 0; i < 20; i++) bars.push(0);
 

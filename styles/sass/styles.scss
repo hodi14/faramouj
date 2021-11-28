@@ -1235,6 +1235,10 @@ footer {
       .content {
         z-index: 1;
         position: relative;
+        @include xxs {
+          width: 100%;
+          max-width: 12rem;
+        }
         .english {
           margin: auto;
           font-size: 3rem;
@@ -1246,6 +1250,12 @@ footer {
           }
           @include sm {
             font-size: 2.5rem !important;
+          }
+          @include xxs {
+            max-width: unset;
+            text-align: left;
+            font-size: 1.8rem !important;
+            transform: none;
           }
         }
         .persian {
@@ -1259,6 +1269,12 @@ footer {
           }
           @include sm {
             font-size: 2rem !important;
+          }
+          @include xxs {
+            max-width: unset;
+            text-align: right;
+            font-size: 1.5rem !important;
+            transform: none;
           }
         }
       }
@@ -1318,6 +1334,9 @@ footer {
           }
           @include md {
             font-size: 2.5rem;
+          }
+          @include xs {
+            font-size: 2.2rem;
           }
         }
       }
@@ -2624,8 +2643,9 @@ footer {
       .picture {
         img {
           height: 4rem !important;
+          width: 4rem !important;
           border-radius: 100%;
-          object-fit: cover;
+          object-fit: contain;
         }
       }
       .detail {

@@ -1302,6 +1302,12 @@ footer .footerContact a {
   z-index: 1;
   position: relative;
 }
+@media (max-width: 400px) {
+  .homePage .homeCategories .homeCategoryCard .content {
+    width: 100%;
+    max-width: 12rem;
+  }
+}
 .homePage .homeCategories .homeCategoryCard .content .english {
   margin: auto;
   font-size: 3rem;
@@ -1319,6 +1325,14 @@ footer .footerContact a {
     font-size: 2.5rem !important;
   }
 }
+@media (max-width: 400px) {
+  .homePage .homeCategories .homeCategoryCard .content .english {
+    max-width: unset;
+    text-align: left;
+    font-size: 1.8rem !important;
+    transform: none;
+  }
+}
 .homePage .homeCategories .homeCategoryCard .content .persian {
   margin: auto;
   font-size: 2.5rem;
@@ -1334,6 +1348,14 @@ footer .footerContact a {
 @media (max-width: 769px) {
   .homePage .homeCategories .homeCategoryCard .content .persian {
     font-size: 2rem !important;
+  }
+}
+@media (max-width: 400px) {
+  .homePage .homeCategories .homeCategoryCard .content .persian {
+    max-width: unset;
+    text-align: right;
+    font-size: 1.5rem !important;
+    transform: none;
   }
 }
 .homePage .homeCategories .homeCategoryCard:first-child .english {
@@ -1406,6 +1428,11 @@ footer .footerContact a {
 @media (max-width: 992px) {
   .homePage .homeDream .centeredContent h2.persian {
     font-size: 2.5rem;
+  }
+}
+@media (max-width: 580px) {
+  .homePage .homeDream .centeredContent h2.persian {
+    font-size: 2.2rem;
   }
 }
 .homePage .homeDream .picture * {
@@ -2799,8 +2826,9 @@ footer .footerContact a {
 }
 .aboutPage .team .employeeCard .picture img {
   height: 4rem !important;
+  width: 4rem !important;
   border-radius: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .aboutPage .team .employeeCard .detail {
   padding: 0.5rem;

@@ -25,13 +25,13 @@ export default [
     },
     {
         id: 15,
-        name: "Mhranush Shirchi",
+        name: "Mehranoosh Shirchi",
         team: "",
         position: "CSO"
     },
     {
         id: 21,
-        name: "Amin Malekolketab",
+        name: "Amin Malekolkotab",
         team: "Marketing Team",
         position: "Digital Marketer"
     },
@@ -116,7 +116,7 @@ export default [
     {
         id: 61,
         name: "Mahdi Asadi",
-        team: "Other",
+        team: "Accounting",
         position: "Accountant"
     },
 ]
