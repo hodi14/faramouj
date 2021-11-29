@@ -25,6 +25,7 @@
     "react-owl-carousel": "^2.3.3",
     "react-particles-js": "^3.5.3",
     "react-three": "^0.9.7",
+    "sharp": "^0.29.3",
     "three": "^0.133.1",
     "tsparticles": "^1.36.0",
     "wavesurfer-react": "^2.0.11"
@@ -34,5 +35,4 @@
     "eslint-config-next": "11.1.2",
     "webpack": "^5.60.0"
   }
-
 }
