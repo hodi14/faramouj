@@ -27,9 +27,10 @@ body {
   overflow-x: hidden;
   padding: 0;
   font-family: IRANYekan;
+  cursor: url("../../public/assets/images/cursorLight.png") 40 40, auto;
 }
 body * {
-  cursor: none !important;
+  cursor: url("../../public/assets/images/cursorLight.png") 40 40, auto;
   color: #fff;
   transition: 0.4s;
 }
@@ -53,50 +54,6 @@ body h4.persian {
 body.loading::-webkit-scrollbar {
   overflow: hidden;
   height: 100vh;
-}
-
-.customCursor {
-  position: absolute;
-  width: 3rem;
-  height: 3rem;
-  z-index: 1001;
-  transition: none;
-  pointer-events: none;
-  left: 0;
-  top: 0;
-  background-color: transparent;
-}
-@media (max-width: 992px) {
-  .customCursor {
-    display: none;
-  }
-}
-.customCursor .border {
-  border: 2px solid #fff;
-  margin: auto;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 100%;
-  transition: 2s;
-}
-.customCursor .circle {
-  margin: auto;
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 100%;
-  background-color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.customCursor.hovered .circle {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-.customCursor.clicked .circle {
-  width: 2.5rem;
-  height: 2.5rem;
 }
 
 .owl-carousel {
@@ -157,14 +114,6 @@ a {
   max-width: 75rem;
   margin: auto;
   overflow: hidden;
-}
-
-.centeredContent {
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 main {
@@ -307,6 +256,9 @@ img {
   position: relative;
   min-height: calc(100vh - 5rem);
   padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 992px) {
   .consultant {
@@ -366,6 +318,20 @@ img {
 .consultant .form .inputs input {
   background-color: transparent;
   border-bottom: 2px solid #444444;
+  max-width: 20rem;
+  position: relative;
+}
+.consultant .form .inputs input::after {
+  content: "";
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #fff;
+  width: 100%;
+  max-width: 0;
+}
+.consultant .form .inputs input:focus::after {
   max-width: 20rem;
 }
 .consultant .form .inputs textarea {
@@ -724,7 +690,6 @@ img {
   font-weight: bold;
   position: absolute;
   right: 3rem;
-  top: 2rem;
   color: #181D21;
   -webkit-text-stroke-width: 0.1px;
   -webkit-text-stroke-color: #fff;
@@ -1220,6 +1185,7 @@ footer .footerContact a {
   align-items: center;
 }
 .homePage .homeCategories .homeCategoryCard .arrow {
+  transition: 0.2s;
   z-index: 1;
   position: absolute;
   right: 0.5rem;
@@ -1274,7 +1240,7 @@ footer .footerContact a {
   max-width: 100%;
 }
 .homePage .homeCategories .homeCategoryCard:nth-child(2):hover:after {
-  background: #fff;
+  background: #ddd;
 }
 .homePage .homeCategories .homeCategoryCard:nth-child(2):hover h2 {
   color: #0071E3;
@@ -1377,10 +1343,14 @@ footer .footerContact a {
 .homePage .homeDream {
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .homePage .homeDream #tsparticles {
   height: calc(100vh - 4rem);
   margin: auto;
+  position: absolute;
 }
 .homePage .homeDream .centeredContent {
   justify-content: center;
@@ -1770,8 +1740,12 @@ footer .footerContact a {
   min-height: 6rem;
   direction: ltr;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
+}
+@media (max-width: 992px) {
+  .homePage .homeComments .commentCard .bottom {
+    flex-wrap: wrap;
+  }
 }
 .homePage .homeComments .commentCard .bottom .voice {
   height: 10rem;
@@ -1817,6 +1791,7 @@ footer .footerContact a {
   transition: 0.8s;
 }
 .homePage .homeComments .commentCard .bottom .name {
+  max-width: 12rem;
   padding: 0.5rem;
   display: flex;
   align-items: center;
@@ -1884,6 +1859,11 @@ footer .footerContact a {
   width: 4rem;
   min-height: unset;
 }
+.seoPage .seoHand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .seoPage .seoHand .picture * {
   position: relative !important;
 }
@@ -1913,6 +1893,9 @@ footer .footerContact a {
   }
 }
 .seoPage .seoLamp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 60rem;
   background-image: url("../../public/assets/images/seo/lamp.png");
   background-repeat: no-repeat;
@@ -2000,6 +1983,11 @@ footer .footerContact a {
 .seoPage .seoLamp h6:nth-child(2) {
   border-right: 2px solid #FA3454;
 }
+.seoPage .seoStats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .seoPage .seoStats .title {
   text-align: center;
 }
@@ -2058,6 +2046,9 @@ footer .footerContact a {
   color: #444444;
 }
 .seoPage .seoPuzzle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 5rem !important;
   max-width: 60rem !important;
 }
@@ -2234,6 +2225,9 @@ footer .footerContact a {
   width: 4rem;
 }
 .contentProductionPage .contentWhat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   max-width: 50rem;
   overflow: hidden;
@@ -2299,6 +2293,11 @@ footer .footerContact a {
     max-width: 22rem !important;
   }
 }
+.contentProductionPage .contentInvest {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .contentProductionPage .contentInvest .picture * {
   position: relative !important;
 }
@@ -2350,6 +2349,9 @@ footer .footerContact a {
   }
 }
 .contentProductionPage .contentKnowledge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: right;
 }
 .contentProductionPage .contentKnowledge #tsparticles {
@@ -2390,6 +2392,9 @@ footer .footerContact a {
   }
 }
 .contentProductionPage .contentIf {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: right;
   position: relative;
 }
@@ -2424,6 +2429,11 @@ footer .footerContact a {
   margin: 0 auto;
   position: relative;
   min-height: calc(100vh - 4rem);
+}
+.webDesignPage .webDescription {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .webDesignPage .webDescription .centeredContent {
   display: flex;
@@ -2887,6 +2897,7 @@ footer .footerContact a {
 body.lightTheme {
   /*#region General */
   background-color: #ddd;
+  cursor: url("../../public/assets/images/cursorDark.png") 40 40, auto;
   /*#endregion */
   /*#region Loader */
   /*#endregion */
@@ -2912,6 +2923,7 @@ body.lightTheme {
   /*#endregion */
 }
 body.lightTheme * {
+  cursor: url("../../public/assets/images/cursorDark.png") 40 40, auto;
   color: #181D21;
 }
 body.lightTheme .customCursor .border {

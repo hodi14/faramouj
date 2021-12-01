@@ -50,6 +50,7 @@ export default function Header() {
 
     toggleTheme.onclick = () => {
       document.body.classList.toggle("lightTheme");
+      document.body.style.cursor = `url("../../public/assets/images/cursorDark.png") 40 40, auto `;
     };
   }, []);
   return (

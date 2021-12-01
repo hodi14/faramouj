@@ -9,7 +9,6 @@ import Script from "next/script";
 import Loader from "../Components/Loader";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import dynamic from "next/dynamic";
 
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -17,7 +16,6 @@ export default function MyApp({ Component, pageProps }) {
   let time = 0;
   useEffect(() => {
     document.querySelector(".loader").classList.remove("loaded");
-    document.body.classList.add("loading");
     const pictures = document.images;
     const picturesCount = pictures.length - 3;
     console.log("Loding...");
@@ -31,7 +29,6 @@ export default function MyApp({ Component, pageProps }) {
         if (picture.style.display == "none") loadingCount += 1;
         if (loadingCount >= picturesCount || time >= 10) {
           document.querySelector(".loader").classList.add("loaded");
-          document.body.classList.remove("loading");
           console.log("page is loaded");
           clearInterval(loaderInterval);
         }
@@ -50,7 +47,6 @@ export default function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </Layout>
       <Script src="../assets/scripts/scrollAnimation.js" />
-      <Script src="../assets/scripts/cursor.js" />
     </div>
   );
 }

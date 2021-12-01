@@ -8,8 +8,11 @@ body {
   overflow-x: hidden;
   padding: 0;
   font-family: $fontPersian;
+  cursor: url("../../public/assets/images/cursorLight.png") 40 40, auto;
+
   * {
-    cursor: none !important;
+    cursor: url("../../public/assets/images/cursorLight.png") 40 40, auto;
+
     @include md {
       cursor: auto !important;
     }
@@ -33,52 +36,6 @@ body {
   &.loading::-webkit-scrollbar {
     overflow: hidden;
     height: 100vh;
-  }
-}
-
-.customCursor {
-  position: absolute;
-  width: 3rem;
-  height: 3rem;
-  z-index: 1001;
-  transition: none;
-  pointer-events: none;
-  left: 0;
-  top: 0;
-  background-color: transparent;
-  @include md {
-    display: none;
-  }
-  .border {
-    border: 2px solid $colorText;
-    margin: auto;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 100%;
-    transition: 2s;
-  }
-  .circle {
-    margin: auto;
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 100%;
-    background-color: $colorText;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  &.hovered {
-    .circle {
-      width: 1.5rem;
-      height: 1.5rem;
-    }
-  }
-  &.clicked {
-    .circle {
-      width: 2.5rem;
-      height: 2.5rem;
-    }
   }
 }
 
@@ -141,14 +98,6 @@ a {
     margin: auto;
     overflow: hidden;
   }
-}
-
-.centeredContent {
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 main {
@@ -236,12 +185,10 @@ img {
       min-height: 2rem;
       &:nth-child(1) {
         background: linear-gradient(to left, $colorYellow, 50%, $colorOrange);
-
       }
       &:nth-child(2) {
         animation-delay: 0.2s;
         background: linear-gradient(to left, $colorOrange, 50%, $colorRed);
-
       }
       &:nth-child(3) {
         animation-delay: 0.4s;
@@ -250,7 +197,6 @@ img {
       &:nth-child(4) {
         animation-delay: 0.6s;
         background: linear-gradient(to left, purple, 50%, $colorBlue);
-
       }
     }
   }
@@ -287,6 +233,9 @@ img {
   position: relative;
   min-height: calc(100vh - 5rem);
   padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @include md {
     min-height: calc(100vh - 4rem);
   }
@@ -335,6 +284,20 @@ img {
         background-color: transparent;
         border-bottom: 2px solid $colorGray;
         max-width: 20rem;
+        position: relative;
+        &::after {
+          content: "";
+          height: 2px;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          background-color: #fff;
+          width: 100%;
+          max-width: 0;
+        }
+        &:focus::after {
+          max-width: 20rem;
+        }
       }
       textarea {
         height: 3rem;
@@ -656,7 +619,6 @@ img {
         font-weight: bold;
         position: absolute;
         right: 3rem;
-        top: 2rem;
         color: $colorBackground;
         -webkit-text-stroke-width: 0.1px;
         -webkit-text-stroke-color: $colorText;
@@ -1136,6 +1098,7 @@ footer {
       align-items: center;
 
       .arrow {
+        transition: 0.2s;
         z-index: 1;
         position: absolute;
         right: 0.5rem;
@@ -1210,7 +1173,7 @@ footer {
       }
       &:nth-child(2):hover {
         &:after {
-          background: $colorText;
+          background: #ddd;
         }
         h2 {
           color: $colorBlue;
@@ -1298,9 +1261,13 @@ footer {
   .homeDream {
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     #tsparticles {
       height: calc(100vh - 4rem);
       margin: auto;
+      position: absolute;
     }
     .centeredContent {
       justify-content: center;
@@ -1654,8 +1621,11 @@ footer {
         min-height: 6rem;
         direction: ltr;
         display: flex;
-        flex-wrap: wrap;
+        
         justify-content: space-around;
+        @include md {
+          flex-wrap: wrap;
+        }
         .voice {
           height: 10rem;
           padding: 0.5rem;
@@ -1699,6 +1669,7 @@ footer {
         }
 
         .name {
+          max-width: 12rem;
           padding: 0.5rem;
           display: flex;
           align-items: center;
@@ -1769,6 +1740,9 @@ footer {
     min-height: unset;
   }
   .seoHand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .picture {
       * {
         position: relative !important;
@@ -1797,6 +1771,9 @@ footer {
     }
   }
   .seoLamp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 60rem;
     background-image: url("../../public/assets/images/seo/lamp.png");
     background-repeat: no-repeat;
@@ -1874,6 +1851,9 @@ footer {
     }
   }
   .seoStats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .title {
       text-align: center;
       h2 {
@@ -1927,6 +1907,9 @@ footer {
     }
   }
   .seoPuzzle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 5rem !important;
     max-width: 60rem !important;
     h2 {
@@ -2078,6 +2061,9 @@ footer {
   }
 
   .contentWhat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     max-width: 50rem;
     overflow: hidden;
@@ -2135,6 +2121,9 @@ footer {
     }
   }
   .contentInvest {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .picture {
       * {
         position: relative !important;
@@ -2181,6 +2170,9 @@ footer {
     }
   }
   .contentKnowledge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: right;
     #tsparticles {
       height: 100%;
@@ -2215,6 +2207,9 @@ footer {
     }
   }
   .contentIf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: right;
     position: relative;
     #tsparticles {
@@ -2251,6 +2246,9 @@ footer {
   }
 
   .webDescription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .centeredContent {
       display: flex;
       justify-content: center;
@@ -2704,7 +2702,10 @@ footer {
 body.lightTheme {
   /*#region General */
   background-color: #ddd;
+  cursor: url("../../public/assets/images/cursorDark.png") 40 40, auto;
+
   * {
+    cursor: url("../../public/assets/images/cursorDark.png") 40 40, auto;
     color: $colorBackground;
   }
 
@@ -3013,7 +3014,7 @@ body.lightTheme {
       .map {
         .location {
           .details {
-            background-color:#ccc;
+            background-color: #ccc;
             a {
               color: $colorBackground;
               opacity: 0.7;
