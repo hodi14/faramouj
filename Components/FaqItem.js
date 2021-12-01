@@ -4,10 +4,12 @@ export default function FaqItem(props) {
   const question = props.question;
   const answer = props.answer;
   useEffect(() => {
-    const arrows = document.querySelectorAll(".question i");
+    const buttons = document.querySelectorAll(".question button");
     const answers = document.querySelectorAll(".answer");
-    for (let arrow of arrows) {
-      arrow.onclick = () => {
+    for (let button of buttons) {
+      button.onclick = () => {
+        console.log("fine");
+        const arrow = button.querySelector("i");
         if (arrow.classList.contains("fa-plus")) {
           const currAnswer = arrow.parentElement.nextElementSibling;
 
@@ -35,7 +37,9 @@ export default function FaqItem(props) {
     <div className="faqItem">
       <div className="question">
         <h6>{question}</h6>
-        <i className="far fa-plus" />
+        <button type="button">
+          <i className="far fa-plus" />
+        </button>
       </div>
       <div className="answer">
         <p>{answer}</p>

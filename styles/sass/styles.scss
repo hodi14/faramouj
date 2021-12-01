@@ -8,10 +8,10 @@ body {
   overflow-x: hidden;
   padding: 0;
   font-family: $fontPersian;
-  cursor: url("../../public/assets/images/cursorLight.png") 40 40, auto;
+  cursor: url("../../public/assets/images/cursorLight.png") 40 40, auto !important;
 
   * {
-    cursor: url("../../public/assets/images/cursorLight.png") 40 40, auto;
+    cursor: url("../../public/assets/images/cursorLight.png") 40 40, auto !important;
 
     @include md {
       cursor: auto !important;
@@ -202,7 +202,7 @@ img {
   }
   &.loaded {
     animation: fade linear forwards 1.5s;
-    animation-delay: 3s;
+    animation-delay: 1s;
   }
 }
 @keyframes fade {
@@ -496,6 +496,9 @@ img {
 
 /*#region FAQ */
 .faq {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .title {
     padding: 1rem 0.5rem 2rem;
     text-align: center;
@@ -519,8 +522,12 @@ img {
         font-weight: bold;
         font-size: 1.1rem;
       }
+      button {
+        border: none;
+        background-color: transparent;
+      }
       i {
-        cursor: pointer;
+        
         &:hover {
           transform: scale(1.1);
         }
@@ -2705,10 +2712,10 @@ footer {
 body.lightTheme {
   /*#region General */
   background-color: #ddd;
-  cursor: url("../../public/assets/images/cursorDark.png") 40 40, auto;
+  cursor: url("../../public/assets/images/cursorDark.png") 40 40, auto !important;
 
   * {
-    cursor: url("../../public/assets/images/cursorDark.png") 40 40, auto;
+    cursor: url("../../public/assets/images/cursorDark.png") 40 40, auto !important;
     color: $colorBackground;
   }
 

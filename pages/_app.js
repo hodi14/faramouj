@@ -21,7 +21,7 @@ export default function MyApp({ Component, pageProps }) {
     console.log("Loding...");
     let t = 1;
     const loaderInterval = setInterval(() => {
-      time += 0.01;
+      time += 0.5;
       for (let picture of pictures) {
         picture.onload = () => {
           loadingCount += 1;
@@ -33,7 +33,7 @@ export default function MyApp({ Component, pageProps }) {
           clearInterval(loaderInterval);
         }
       }
-    }, 10);
+    }, 500);
   }, );
 
   return (
