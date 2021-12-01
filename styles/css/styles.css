@@ -1086,6 +1086,9 @@ footer .footerContact a {
   background-position: center;
   background-repeat: no-repeat;
   animation: homeAnimation linear infinite 5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .homePage .homeBanner .centeredContent {
   z-index: 2;
