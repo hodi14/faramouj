@@ -66,6 +66,10 @@ a {
   margin: 0;
 }
 
+.centeredContent {
+  width: 100%;
+}
+
 .innerPage {
   .bannerVideo {
     height: 100vh;
@@ -945,6 +949,7 @@ footer {
         margin: 0.5rem;
         &:hover {
           opacity: 1;
+          color: unset;
         }
       }
     }
@@ -2169,7 +2174,7 @@ footer {
         width: fit-content;
         transform: translate(12rem, -2rem);
         @include lg {
-          transform: translate(18rem, -3rem);
+          transform: translate(17rem, -3rem);
           font-size: 1.2rem;
         }
         @media (max-width: 680px) {

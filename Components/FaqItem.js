@@ -11,11 +11,11 @@ export default function FaqItem(props) {
         console.log("fine");
         const arrow = button.querySelector("i");
         if (arrow.classList.contains("fa-plus")) {
-          const currAnswer = arrow.parentElement.nextElementSibling;
-
-          for (let other of arrows) {
-            other.classList.remove("fa-minus");
-            other.classList.add("fa-plus");
+          const currAnswer = arrow.parentElement.parentElement.nextElementSibling;
+          for (let other of buttons) {
+            const i = other.querySelector("i");
+            i.classList.remove("fa-minus");
+            i.classList.add("fa-plus");
           }
           arrow.classList.remove("fa-plus");
           arrow.classList.add("fa-minus");
@@ -23,9 +23,10 @@ export default function FaqItem(props) {
           currAnswer.classList.add("opened");
         }
         else {
-          for (let other of arrows) {
-            other.classList.remove("fa-minus");
-            other.classList.add("fa-plus");
+          for (let other of buttons) {
+            const i = other.querySelector("i");
+            i.classList.remove("fa-minus");
+            i.classList.add("fa-plus");
           }
           for (let answer of answers) answer.classList.remove("opened");
         }

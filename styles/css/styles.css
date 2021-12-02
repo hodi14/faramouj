@@ -85,6 +85,10 @@ a {
   margin: 0;
 }
 
+.centeredContent {
+  width: 100%;
+}
+
 .innerPage .bannerVideo {
   height: 100vh;
   width: 100vw;
@@ -1029,6 +1033,7 @@ footer > .content > div a {
 }
 footer > .content > div a:hover {
   opacity: 1;
+  color: unset;
 }
 footer .footerLogo {
   width: 100% !important;
@@ -2347,7 +2352,7 @@ footer .footerContact a {
 }
 @media (min-width: 992px) {
   .contentProductionPage .contentInvest .text p {
-    transform: translate(18rem, -3rem);
+    transform: translate(17rem, -3rem);
     font-size: 1.2rem;
   }
 }
