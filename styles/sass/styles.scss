@@ -8,10 +8,10 @@ body {
   overflow-x: hidden;
   padding: 0;
   font-family: $fontPersian;
-  cursor: url("../../public/assets/images/cursorLight.png") 40 40, auto !important;
+  cursor: url("../../public/assets/images/cursorLight.png") 32 32, auto !important;
 
   * {
-    cursor: url("../../public/assets/images/cursorLight.png") 40 40, auto !important;
+    cursor: url("../../public/assets/images/cursorLight.png") 32 32, auto !important;
 
     @include md {
       cursor: auto !important;

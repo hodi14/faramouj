@@ -27,10 +27,10 @@ body {
   overflow-x: hidden;
   padding: 0;
   font-family: IRANYekan;
-  cursor: url("../../public/assets/images/cursorLight.png") 40 40, auto !important;
+  cursor: url("../../public/assets/images/cursorLight.png") 32 32, auto !important;
 }
 body * {
-  cursor: url("../../public/assets/images/cursorLight.png") 40 40, auto !important;
+  cursor: url("../../public/assets/images/cursorLight.png") 32 32, auto !important;
   color: #fff;
   transition: 0.4s;
 }
