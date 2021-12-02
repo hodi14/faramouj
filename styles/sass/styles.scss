@@ -2717,10 +2717,10 @@ footer {
 body.lightTheme {
   /*#region General */
   background-color: #ddd;
-  cursor: url("../../public/assets/images/cursorDark.png") 40 40, auto !important;
+  cursor: url("../../public/assets/images/cursorDark.png") 32 32, auto !important;
 
   * {
-    cursor: url("../../public/assets/images/cursorDark.png") 40 40, auto !important;
+    cursor: url("../../public/assets/images/cursorDark.png") 32 32, auto !important;
     color: $colorBackground;
   }
 

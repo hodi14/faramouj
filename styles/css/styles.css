@@ -2911,7 +2911,7 @@ footer .footerContact a {
 body.lightTheme {
   /*#region General */
   background-color: #ddd;
-  cursor: url("../../public/assets/images/cursorDark.png") 40 40, auto !important;
+  cursor: url("../../public/assets/images/cursorDark.png") 32 32, auto !important;
   /*#endregion */
   /*#region Loader */
   /*#endregion */
@@ -2937,7 +2937,7 @@ body.lightTheme {
   /*#endregion */
 }
 body.lightTheme * {
-  cursor: url("../../public/assets/images/cursorDark.png") 40 40, auto !important;
+  cursor: url("../../public/assets/images/cursorDark.png") 32 32, auto !important;
   color: #181D21;
 }
 body.lightTheme .customCursor .border {
