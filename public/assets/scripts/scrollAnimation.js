@@ -18,7 +18,7 @@ window.onscroll = () => {
 
   const scrollScetion = document.querySelector(".scrollSection");
   if (scrollScetion != null) {
-    if (wScroll < wHeight - 400) scrollScetion.classList.add("hidden");
+    if (wScroll < wHeight - 400 || (document.body.offsetHeight - wScroll < wHeight + 100)) scrollScetion.classList.add("hidden");
     else scrollScetion.classList.remove("hidden");
 
     let active = wScroll / wHeight;

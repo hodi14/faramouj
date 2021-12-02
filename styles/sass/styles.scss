@@ -581,7 +581,7 @@ img {
   height: calc(100vh - 4rem);
   right: 0;
   width: 4rem;
-  z-index: 200;
+  z-index: 10;
   top: 4rem;
   @include sm {
     background-color: $colorBackground;
@@ -922,7 +922,7 @@ footer {
   text-align: right;
   min-height: 50vh;
   background-color: #1c2227;
-  z-index: 1000;
+  z-index: 11;
   width: 100vw;
   position: relative;
 
