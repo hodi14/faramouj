@@ -6,7 +6,7 @@ export default function Page404() {
       <div className="pageContents">
         <h1>
           4
-          <Custom404 />4!
+          <Custom404 />4
         </h1>
         <h6>
             صفحه ای که میخواستی رو پیدا نکردم :(
