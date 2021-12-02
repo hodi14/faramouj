@@ -15,7 +15,6 @@ export default function MyApp({ Component, pageProps }) {
   let loadingCount = 0;
   let time = 0;
   useEffect(() => {
-    document.querySelector(".loader").classList.remove("loaded");
     const pictures = document.images;
     const picturesCount = pictures.length - 3;
     console.log("Loding...");
