@@ -17,7 +17,7 @@ export default function MyApp({ Component, pageProps }) {
   useEffect(() => {
     document.querySelector(".loader").classList.remove("loaded");
     const pictures = document.images;
-    const picturesCount = pictures.length - 3;
+    const picturesCount = pictures.length - 1;
     console.log("Loding...");
     let t = 1;
     const loaderInterval = setInterval(() => {
@@ -27,7 +27,7 @@ export default function MyApp({ Component, pageProps }) {
           loadingCount += 1;
         };
         if (picture.style.display == "none") loadingCount += 1;
-        if (loadingCount >= picturesCount || time >= 10) {
+        if (loadingCount >= picturesCount || time >= 8) {
           document.querySelector(".loader").classList.add("loaded");
           console.log("page is loaded");
           clearInterval(loaderInterval);

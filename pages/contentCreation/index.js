@@ -6,6 +6,7 @@ import ContentIf from "../../Components/ContentIf";
 import ContentKnowledge from "../../Components/ContentKnowledge";
 import ScrollSection from "../../Components/ScrollSection";
 import Script from "next/script";
+import Consultant from "../../Components/Consultant";
 
 export default function ContentProductionPage() {
   return (
@@ -19,11 +20,12 @@ export default function ContentProductionPage() {
       </div>
 
       <div className="pageContents">
-        <ScrollSection count={4} />
+        <ScrollSection count={5} />
         <ContentWhat />
         <ContentInvest />
         <ContentKnowledge />
         <ContentIf />
+        <Consultant category="تولید محتوا " />
       </div>
       <Script src="../assets/scripts/parallax.js" />
     </section>

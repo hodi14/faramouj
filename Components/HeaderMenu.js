@@ -10,7 +10,7 @@ export default function HeaderMenu(props) {
     { link: "/webDesign", title: "  طراحی سایت "},
     { link: "/contentCreation", title: "  تولید محتوا " },
     { link: "/", title: " " },
-    { link: "/seo", title: " بهینه سازی  " },
+    { link: "/seo", title: " سئو " },
     { link: "/contact", title: " تماس با ما  " },
     { link: "/about", title: " درباره فراموج  " },
   ];

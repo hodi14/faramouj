@@ -12,7 +12,7 @@ export default function SeoPage() {
   return (
     <section className="innerPage seoPage">
       <PageBanner nameEnglish="SEO" namePersian=" سئو" />
-      <NextSeo title="بهینه سازی" />
+      <NextSeo title="سئو" />
       <div className="bannerVideo">
         <video autoPlay loop muted>
           <source src="../assets/images/GIFS/seo.mp4" />
@@ -24,7 +24,7 @@ export default function SeoPage() {
         <SeoHand />
         <SeoLamp />
         <SeoStats />
-        <Consultant category="بهینه سازی" />
+        <Consultant category="سئو " />
         <SeoPuzzle />
       </div>
       <Script src="../assets/scripts/parallax.js" />
