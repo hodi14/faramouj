@@ -1087,7 +1087,9 @@ footer {
   .homeCategories {
     margin: auto;
     max-width: 75rem;
-    min-height: calc(100vh - 4rem);
+    height: calc(100vh - 4rem);
+    max-height: 45rem;
+    min-height: 30rem;
     position: relative;
     direction: ltr;
 
