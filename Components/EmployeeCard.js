@@ -7,7 +7,7 @@ export default function EmployeeCard(props) {
     return (
         <div className="employeeCard">
             <div className="picture">
-                <Image loading="eager" src={require("../public/assets/images/Employees/" + id.toString() + ".jpg")} alt={name} layout="fill" />
+                <Image loading="eager" src={"/assets/images/Employees/" + id.toString() + ".jpg"} alt={name} layout="fill" />
             </div>
             <div className="detail">
                 <h6>

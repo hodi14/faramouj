@@ -1,4 +1,3 @@
-import Link from "next/link";
 import FooterContact from "./FooterContact";
 import FooterLinks from "./FooterLinks";
 import FooterLogo from "./FooterLogo";

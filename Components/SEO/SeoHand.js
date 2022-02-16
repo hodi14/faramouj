@@ -1,5 +1,5 @@
 import Image from "next/image";
-import hand from "../public/assets/images/seo/phone.png";
+import hand from "../../public/assets/images/seo/phone.png";
 
 export default function SeoHand() {
   return (

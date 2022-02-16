@@ -20,7 +20,7 @@ export default function Contact() {
           <ContactLocation country="iran" mail="info@faramouj.ir" tel="+9802188015422"/>
           <ContactLocation country="austria" mail="info@faramouj.ir" tel="+436602980100"/>
           <Image
-            src={require("../../public/assets/images/map.png")}
+            src={"/assets/images/map.png"}
             alt="Map"
             layout="fill"
             

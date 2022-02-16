@@ -1,7 +1,7 @@
 import PageBanner from "../../Components/PageBanner";
 import { NextSeo } from "next-seo";
-import WebDescription from "../../Components/WebDescription";
-import WebSteps from "../../Components/WebSteps";
+import WebDescription from "../../Components/Web/WebDescription";
+import WebSteps from "../../Components/Web/WebSteps";
 import Consultant from "../../Components/Consultant";
 import Faq from "../../Components/Faq";
 

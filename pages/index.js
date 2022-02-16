@@ -1,13 +1,14 @@
 import Consultant from "../Components/Consultant";
-import HomeAcademy from "../Components/HomeAcademy";
-import HomeBanner from "../Components/HomeBanner";
-import HomeBlog from "../Components/HomeBlog";
-import HomeCategories from "../Components/HomeCategories";
-import HomeComments from "../Components/HomeComments";
-import HomeDream from "../Components/HomeDream";
+import HomeAcademy from "../Components/Home/HomeAcademy";
+import HomeBanner from "../Components/Home/HomeBanner";
+import HomeBlog from "../Components/Home/HomeBlog";
+import HomeCategories from "../Components/Home/HomeCategories";
+import HomeComments from "../Components/Home/HomeComments";
+import HomeDream from "../Components/Home/HomeDream";
+import axios from 'axios';
 
 
-export default function Home() {
+export default function Home({blogPosts}) {
   return (
     <section className="innerPage homePage">
 
@@ -16,8 +17,25 @@ export default function Home() {
       <HomeDream />
       <HomeAcademy />
       <Consultant category="" />
-      <HomeBlog />
+      <HomeBlog blogPosts={blogPosts}/>
       <HomeComments />
     </section>
   );
+}
+
+export async function getStaticProps() {
+  let blogPosts;
+  try {
+    const res = await axios.get('https://blog.faramouj.com/wp-json/wp/v2/posts?per_page=3'); 
+    blogPosts = JSON.stringify(res.data);
+  }
+  catch {
+    blogPosts = [];
+  }
+
+  return {
+    props: {
+      blogPosts: blogPosts
+    }
+  }
 }

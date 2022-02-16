@@ -5,7 +5,7 @@ export default function WebDescription() {
       <div className="centeredContent">
         <div className="picture animation left">
           <Image
-            src={require("../public/assets/images/web/box.png")}
+            src={"/assets/images/web/box.png"}
             alt=" Web Design "
             layout="fill"
             

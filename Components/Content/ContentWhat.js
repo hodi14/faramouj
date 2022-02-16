@@ -15,7 +15,7 @@ export default function ContentWhat() {
                         تولید محتوا انواع مختلفی داره مثل تولید محتوای متنی، گرافیکی، ویدئویی و صوتی .
                     </p>
                     <div className="picture animation right">
-                        <Image loading="eager" src={require("../public/assets/images/content/binoculars.png")} alt="تولید محتوا" layout="fill" />
+                        <Image loading="eager" src={"/assets/images/content/binoculars.png"} alt="تولید محتوا" layout="fill" />
                     </div>
                 </div>
                 

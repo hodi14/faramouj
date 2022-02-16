@@ -8,10 +8,10 @@ body {
   overflow-x: hidden;
   padding: 0;
   font-family: $fontPersian;
-  cursor: url("../../public/assets/images/cursorLight.png") 32 32, auto !important;
+  cursor: url("../public/assets/images/cursorLight.png") 32 32, auto !important;
 
   * {
-    cursor: url("../../public/assets/images/cursorLight.png") 32 32, auto !important;
+    cursor: url("../public/assets/images/cursorLight.png") 32 32, auto !important;
 
     @include md {
       cursor: auto !important;
@@ -1015,7 +1015,7 @@ footer {
     padding: 1rem;
     position: relative;
     overflow: hidden;
-    background-image: url(../../public/assets/images/homeBannerGradient.png);
+    background-image: url(../public/assets/images/homeBannerGradient.png);
     background-size: auto 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -1792,11 +1792,11 @@ footer {
     justify-content: center;
     align-items: center;
     max-width: 60rem;
-    background-image: url("../../public/assets/images/seo/lamp.png");
+    background-image: url("../public/assets/images/seo/lamp.png");
     background-repeat: no-repeat;
     background-size: contain;
     &.on {
-      background-image: url("../../public/assets/images/seo/lampOn.png");
+      background-image: url("../public/assets/images/seo/lampOn.png");
     }
     &.animation.backgroundR {
       background-position: 300%;
@@ -2328,7 +2328,7 @@ footer {
       overflow: hidden;
       display: flex;
       flex-wrap: wrap;
-      background-image: url("../../public/assets/images/web/tree.png");
+      background-image: url("../public/assets/images/web/tree.png");
       background-size: 20rem;
       background-repeat: no-repeat;
       background-position-x: center;
@@ -2719,10 +2719,10 @@ footer {
 body.lightTheme {
   /*#region General */
   background-color: #ddd;
-  cursor: url("../../public/assets/images/cursorDark.png") 32 32, auto !important;
+  cursor: url("../public/assets/images/cursorDark.png") 32 32, auto !important;
 
   * {
-    cursor: url("../../public/assets/images/cursorDark.png") 32 32, auto !important;
+    cursor: url("../public/assets/images/cursorDark.png") 32 32, auto !important;
     color: $colorBackground;
   }
 

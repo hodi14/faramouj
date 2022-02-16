@@ -1,28 +1,11 @@
 import dynamic from "next/dynamic";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-import blogs from "../Data/blogs";
+import blogs from "../../Data/blogs";
 import BlogCard from "./BlogCard";
-import { useEffect, useState } from "react";
-import axios from 'axios';
 
 const HomeBlog = ({ blogPosts }) => {
   const OwlCarousel = dynamic(import("react-owl-carousel"), { ssr: false });
-
-  const [data, setData] = useState({});
-
-  const getBlogApi = async() => {
-    const res = await axios.get('https://blog.faramouj.com/wp-json/wp/v2/posts?per_page=3'); 
-    setData(JSON.stringify(res.data));
-  }
-
-  useEffect(() => {
-    getBlogApi();
-  }
-  , []);
-  console.log("posts: " + data);
-
-
   return (
     <div className="homeBlog">
       <OwlCarousel nav items={1} loop="true" rtl="true">

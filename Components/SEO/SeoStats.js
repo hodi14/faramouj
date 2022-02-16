@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-import user from "../public/assets/images/seo/user.png";
-import star from "../public/assets/images/seo/star.png";
-import shield from "../public/assets/images/seo/shield.png";
-import folder from "../public/assets/images/seo/folder.png";
+import user from "../../public/assets/images/seo/user.png";
+import star from "../../public/assets/images/seo/star.png";
+import shield from "../../public/assets/images/seo/shield.png";
+import folder from "../../public/assets/images/seo/folder.png";
 
 export default function SeoStats() {
   return (

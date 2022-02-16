@@ -27,7 +27,7 @@ export default function SeoPuzzle() {
           </div>
           <div className="step picture animation pop">
             <Image
-              src={require("../public/assets/images/seo/puzzle.png")}
+              src={"/assets/images/seo/puzzle.png"}
               alt="puzzle"
               layout="fill"
             />

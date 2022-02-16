@@ -24,7 +24,7 @@ export default function HomecategoryCard(props) {
   if (props.picture)
     image = (
       <Image
-        src={require("../public/assets/images/webCategory.png")}
+        src={"/assets/images/webCategory.png"}
         layout="fill"
         alt="Web Design"
       />

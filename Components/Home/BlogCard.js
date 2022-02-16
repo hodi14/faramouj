@@ -42,7 +42,7 @@ export default function BlogCard(props) {
                 </div>
                 </div>
             <div className="picture">
-                <Image loading="eager" src={require(`../public/assets/images/blogs/${props.imgPath}`)} alt={title} layout="fill" />
+                <Image loading="eager" src={`/assets/images/blogs/${props.imgPath}`} alt={title} layout="fill" />
             </div>
         </div>
     )

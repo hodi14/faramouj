@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import Sphere from "./Sphere";
-import Box from "./Box";
 
 export default function Face(props) {
   const mesh = useRef();

@@ -1,4 +1,4 @@
-import Custom404 from "../Components/Custom404";
+import Custom404 from "../Components/404/Custom404";
 
 export default function Page404() {
   return (

@@ -13,7 +13,7 @@ export default function WebSteps() {
           <h2>ساخت یک سایت حرفه ای از اینجا شروع می شود</h2>
           <div className="picture animation pop">
             <Image
-              src={require("../public/assets/images/web/plant.png")}
+              src={"assets/images/web/plant.png"}
               layout="fill"
               alt="plant"
               

@@ -1,9 +1,9 @@
 import PageBanner from "../../Components/PageBanner";
 import { NextSeo } from "next-seo";
-import ContentWhat from "../../Components/ContentWhat";
-import ContentInvest from "../../Components/ContentInvest";
-import ContentIf from "../../Components/ContentIf";
-import ContentKnowledge from "../../Components/ContentKnowledge";
+import ContentWhat from "../../Components/Content/ContentWhat";
+import ContentInvest from "../../Components/Content/ContentInvest";
+import ContentIf from "../../Components/Content/ContentIf";
+import ContentKnowledge from "../../Components/Content/ContentKnowledge";
 import ScrollSection from "../../Components/ScrollSection";
 import Script from "next/script";
 import Consultant from "../../Components/Consultant";

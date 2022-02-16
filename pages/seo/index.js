@@ -1,11 +1,11 @@
 import PageBanner from "../../Components/PageBanner";
 import { NextSeo } from "next-seo";
-import SeoHand from "../../Components/SeoHand";
-import SeoLamp from "../../Components/SeoLamp";
-import SeoStats from "../../Components/SeoStats";
+import SeoHand from "../../Components/SEO/SeoHand";
+import SeoLamp from "../../Components/SEO/SeoLamp";
+import SeoStats from "../../Components/SEO/SeoStats";
 import ScrollSection from "../../Components/ScrollSection";
 import Consultant from "../../Components/Consultant";
-import SeoPuzzle from "../../Components/SeoPuzzle";
+import SeoPuzzle from "../../Components/SEO/SeoPuzzle";
 import Script from "next/script";
 
 export default function SeoPage() {

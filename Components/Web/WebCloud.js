@@ -6,7 +6,7 @@ export default function WebCloud(props) {
     <div className={`webCloud animation ${direction}`}>
       <div className="content">
         <Image
-          src={require("../public/assets/images/web/cloud.png")}
+          src={"/assets/images/web/cloud.png"}
           layout="fill"
           alt="cloud"
           

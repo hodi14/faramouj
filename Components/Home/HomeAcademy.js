@@ -1,6 +1,6 @@
 import AcademyCard from "./AcademyCard";
 import AcademyLogin from "./AcademyLogin";
-import courses from "../Data/courses";
+import courses from "../../Data/courses";
 
 export default function HomeAcademy() {
   return (

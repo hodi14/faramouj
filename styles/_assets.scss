@@ -17,27 +17,27 @@ $fontPersian: IRANYekan;
     font-family: Barrio;
     font-style: normal;
     font-weight: normal;
-    src: url('../../public/assets/fonts/Barrio/Barrio-Regular.ttf') format('truetype');
+    src: url('../public/assets/fonts/Barrio/Barrio-Regular.ttf') format('truetype');
 }
 @font-face {
     font-family: IRANYekan;
     font-style: normal;
     font-weight: normal;
-    src: url('../../public/assets/fonts/IRANYekan/WebFonts/fonts/eot/IRANYekanWebRegular.eot');
-    src: url('../../public/assets/fonts/IRANYekan/WebFonts/fonts/eot/IRANYekanWebRegular.eot?#iefix') format('embedded-opentype'),
+    src: url('../public/assets/fonts/IRANYekan/WebFonts/fonts/eot/IRANYekanWebRegular.eot');
+    src: url('../public/assets/fonts/IRANYekan/WebFonts/fonts/eot/IRANYekanWebRegular.eot?#iefix') format('embedded-opentype'),
     /* FF39+,Chrome36+, Opera24+*/
-    url('../../public/assets/fonts/IRANYekan/WebFonts/fonts/woff/IRANYekanWebRegular.woff') format('woff'),
+    url('../public/assets/fonts/IRANYekan/WebFonts/fonts/woff/IRANYekanWebRegular.woff') format('woff'),
     /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-    url('../../public/assets/fonts/IRANYekan/WebFonts/fonts/ttf/IRANYekanWebRegular.ttf') format('truetype');
+    url('../public/assets/fonts/IRANYekan/WebFonts/fonts/ttf/IRANYekanWebRegular.ttf') format('truetype');
 }
 @font-face {
     font-family: Anjoman;
     font-style: normal;
     font-weight: normal;
-    src: url('../../public/assets/fonts/Anjoman/WebFonts/eot/Anjoman-UltraBold.eot');
-    src: url('../../public/assets/fonts/Anjoman/WebFonts/eot/Anjoman-UltraBold.eot?#iefix') format('embedded-opentype'),
+    src: url('../public/assets/fonts/Anjoman/WebFonts/eot/Anjoman-UltraBold.eot');
+    src: url('../public/assets/fonts/Anjoman/WebFonts/eot/Anjoman-UltraBold.eot?#iefix') format('embedded-opentype'),
     /* FF39+,Chrome36+, Opera24+*/
-    url('../../public/assets/fonts/Anjoman/WebFonts/woff/Anjoman-UltraBold.woff') format('woff'),
+    url('../public/assets/fonts/Anjoman/WebFonts/woff/Anjoman-UltraBold.woff') format('woff'),
 }
 @mixin xl {
     @media (min-width: 1180px) {
