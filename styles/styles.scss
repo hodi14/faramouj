@@ -1029,6 +1029,7 @@ footer {
       justify-content: space-between;
       align-items: center;
       max-width: 75rem;
+      height: 100%;
       @include sm {
         flex-wrap: wrap;
         justify-content: center;
