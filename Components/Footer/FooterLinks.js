@@ -6,19 +6,16 @@ export default function FooterLinks() {
       <h4>دسترسی سریع</h4>
       <ul>
         <li>
-          <a href="#">آکادمی فراموج</a>
+          <a href="https://faramouj.academy/">آکادمی فراموج</a>
         </li>
         <li>
           <Link href="/">وبلاگ</Link>
         </li>
         <li>
-          <Link href="/">سوالات متداول</Link>
+          <Link href="/about">درباره ما</Link>
         </li>
         <li>
-          <Link href="/">درباره ما</Link>
-        </li>
-        <li>
-          <Link href="/">تماس با ما</Link>
+          <Link href="/contact">تماس با ما</Link>
         </li>
       </ul>
     </div>

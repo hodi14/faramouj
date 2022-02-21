@@ -17,7 +17,7 @@ export default function Home({blogPosts}) {
       <HomeDream />
       <HomeAcademy />
       <Consultant category="" />
-      <HomeBlog blogPosts={blogPosts}/>
+      {/* <HomeBlog blogPosts={blogPosts}/> */}
       <HomeComments />
     </section>
   );

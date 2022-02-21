@@ -1,4 +1,4 @@
-export default [
+const data = [
     {
         text: "ما از همکاری با فراموج به شدت خوش حالیم",
         audio: "snapp.mp4",
@@ -6,15 +6,12 @@ export default [
         customerPosition: "Seo Manager, Snapp Market",
     },
     {
-        text: "ما از همکاری با فراموج به شدت خوش حالیم",
-        audio: "snapp.mp4",
-        customerName: "Alireza Hodaei",
-        customerPosition: "Chied Front-end Developer, Faramouj",
+        text: "پروژه حرفه ای نیاز به یک تیم حرفه ای مانند فراموج دارد",
+        audio: "foolad.mp4",
+        customerName: "Mr. Rahimi",
+        customerPosition: "CEO, Foolad Shahmirzad",
     },
-    {
-        text: "ما از همکاری با فراموج به شدت خوش حالیم",
-        audio: "snapp.mp4",
-        customerName: "Maziar Faghihi",
-        customerPosition: "CEO, faramouj",
-    }
-]
+
+];
+
+export default data;
